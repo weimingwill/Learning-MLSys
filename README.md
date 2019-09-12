@@ -45,13 +45,18 @@ A curated list of research in machine learning system. Link to the code if avail
 - [Traditional System Optimization](#traditional-system-optimization-papers)
 
 ### PR template
+
 ```
 - Title [[Paper]](link) [[GitHub]](link)
   - Author (*conference(journal) year*)
   - Summary: 
 ```
 
-## Survey
+
+
+## Resources
+
+### Survey
 
 - awesome-production-machine-learning: A curated list of awesome open source libraries to deploy, monitor, version and scale your machine learning [[GitHub]](https://github.com/EthicalML/awesome-production-machine-learning)
 - Survey on End-To-End Machine Learning Automation [[Paper]](https://arxiv.org/pdf/1906.02287.pdf) [[GitHub]](https://github.com/DataSystemsGroupUT/AutoML_Survey)
@@ -78,14 +83,14 @@ A curated list of research in machine learning system. Link to the code if avail
 - A Berkeley View of Systems Challenges for AI [[Paper]](https://arxiv.org/pdf/1712.05855.pdf)
 
 
-## Book
+### Book
 
 - Computer Architecture: A Quantitative Approach [[Must read]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.1881&rep=rep1&type=pdf)
 - Streaming Systems [[Book]](https://www.oreilly.com/library/view/streaming-systems/9781491983867/)
 - Kubernetes in Action (start to read) [[Book]](https://www.oreilly.com/library/view/kubernetes-in-action/9781617293726/)
 - Machine Learning Systems: Designs that scale [[Website]](https://www.manning.com/books/machine-learning-systems)
 
-## Video
+### Video
 - Introduction to Microservices, Docker, and Kubernetes [[YouTube]](https://www.youtube.com/watch?v=1xo-0gCVhTU)
 - ICML Keynote: Lessons Learned from Helping 200,000 non-ML experts use ML [[Video]](https://slideslive.com/38916584/keynote-lessons-learned-from-helping-200000-nonml-experts-use-ml)
 - Adaptive & Multitask Learning Systems [[Website]](https://www.amtl-workshop.org/schedule)
@@ -96,23 +101,23 @@ A curated list of research in machine learning system. Link to the code if avail
   - Start to watch.
 - Netflix: Human-centric Machine Learning Infrastructure [[InfoQ]](https://www.infoq.com/presentations/netflix-ml-infrastructure?utm_source=youtube&utm_medium=link&utm_campaign=qcontalks)
 - SysML 2019: [[YouTube]](https://www.youtube.com/channel/UChutDKIa-AYyAmbT45s991g/videos)
+- SysML 2018: Perspectives and Challenges. Michael Jordan [[YouTube]](https://www.youtube.com/watch?v=4inIBmY8dQI&t=26s)
+- SysML 2018: Systems and Machine Learning Symbiosis. Jeff Dean [[YouTube]](https://www.youtube.com/watch?v=Nj6uxDki6-0)
 - ScaledML 2019: David Patterson, Ion Stoica, Dawn Song and so on [[YouTube]](https://www.youtube.com/playlist?list=PLRM2gQVaW_wWXoUnSfZTxpgDmNaAS1RtG)
 - ScaledML 2018: Jeff Dean, Ion Stoica, Yangqing Jia and so on [[YouTube]](https://www.youtube.com/playlist?list=PLRM2gQVaW_wW9KAxcibxdqY_TDyvmEjzm) [[Slides]](https://www.matroid.com/blog/post/slides-and-videos-from-scaledml-2018)
 - A New Golden Age for Computer Architecture History, Challenges, and Opportunities. David Patterson [[YouTube]](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s)
 - How to Have a Bad Career. David Patterson (I am a big fan) [[YouTube]](https://www.youtube.com/watch?v=Rn1w4MRHIhc)
-- SysML 18: Perspectives and Challenges. Michael Jordan [[YouTube]](https://www.youtube.com/watch?v=4inIBmY8dQI&t=26s)
-- SysML 18: Systems and Machine Learning Symbiosis. Jeff Dean [[YouTube]](https://www.youtube.com/watch?v=Nj6uxDki6-0)
 
-## Course
+### Course
 
 - CS294: AI For Systems and Systems For AI. [[UC Berkeley]](https://github.com/ucbrise/cs294-ai-sys-sp19) (*Strong Recommendation*)
 - CSE 599W: System for ML.  [[Chen Tianqi]](https://github.com/tqchen) [[University of Washington]](http://dlsys.cs.washington.edu/)
-- Tutorial code on how to build your own Deep Learning System in 2k Lines [[GitHub]](https://github.com/tqchen/tinyflow)
 - CSE 291F: Advanced Data Analytics and ML Systems. [[UCSD]](http://cseweb.ucsd.edu/classes/wi19/cse291-f/)
 - CSci 8980: Machine Learning in Computer Systems [[University of Minnesota, Twin Cities]](http://www-users.cselabs.umn.edu/classes/Spring-2019/csci8980/)
 - Mu Li (MxNet, Parameter Server): Introduction to Deep Learning [[Best DL Course I think]](https://courses.d2l.ai/berkeley-stat-157/index.html)  [[Book]](https://www.d2l.ai/)
+- Tutorial code on how to build your own Deep Learning System in 2k Lines [[GitHub]](https://github.com/tqchen/tinyflow)
 
-## Blog
+### Blog
 
 - Kubernetes CheatSheets In A4 [[GitHub]](https://github.com/HuaizhengZhang/cheatsheet-kubernetes-A4)
 - A Gentle Introduction to Kubernetes [[Blog]](https://medium.com/faun/a-gentle-introduction-to-kubernetes-4961e443ba26)
@@ -135,9 +140,9 @@ A curated list of research in machine learning system. Link to the code if avail
 - TensorFlow Serving + Docker + Tornado机器学习模型生产级快速部署 [[Blog]](https://zhuanlan.zhihu.com/p/52096200?utm_source=wechat_session&utm_medium=social&utm_oi=38612796178432)
 - Deploying a Machine Learning Model as a REST API [[Blog]](https://towardsdatascience.com/deploying-a-machine-learning-model-as-a-rest-api-4a03b865c166)
 
-## Userful Tools
+### Userful Tools
 
-### Profile
+#### Profile
 - NetworKit is a growing open-source toolkit for large-scale network analysis. [[GitHub]](https://github.com/kit-parco/networkit)
 - gpu-sentry: Flask-based package for monitoring utilisation of nVidia GPUs. [[GitHub]](https://github.com/jacenkow/gpu-sentry)
 - anderskm/gputil: A Python module for getting the GPU status from NVIDA GPUs using nvidia-smi programmically in Python [[GitHub]](https://github.com/anderskm/gputil)
@@ -150,7 +155,7 @@ A curated list of research in machine learning system. Link to the code if avail
   - Stop guessing why software is slow. Advanced sampling and profiling techniques quickly analyze your code, isolate issues, and deliver insights for optimizing performance on modern processors
 - Pyflame: A Ptracing Profiler For Python [[GitHub]](https://github.com/uber/pyflame)
 
-### Others
+#### Others
 - Facebook AI Performance Evaluation Platform [[GitHub]](https://github.com/facebook/FAI-PEP)
 - Netron: Visualizer for deep learning and machine learning models [[GitHub]](https://github.com/lutzroeder/netron)
 - Facebook/FBGEMM: FBGEMM (Facebook GEneral Matrix Multiplication) is a low-precision, high-performance matrix-matrix multiplications and convolution library for server-side inference. [[GitHub]](https://github.com/pytorch/FBGEMM)
@@ -164,7 +169,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Example recipes for Kubernetes Network Policies that you can just copy paste [[GitHub]](https://github.com/ahmetb/kubernetes-network-policy-recipes)
 
 
-## Project
+### Project
 
 - Machine Learning for .NET [[GitHub]](https://github.com/dotnet/machinelearning)
   - ML.NET is a cross-platform open-source machine learning framework which makes machine learning accessible to .NET developers.
@@ -180,7 +185,11 @@ A curated list of research in machine learning system. Link to the code if avail
 - GNES is Generic Neural Elastic Search, a cloud-native semantic search system based on deep neural network. [[GitHub]](https://github.com/gnes-ai/gnes)
 
 
-## Data Processing
+
+## Papers
+
+### Data Processing
+
 - Kedro is a workflow development tool that helps you build data pipelines that are robust, scalable, deployable, reproducible and versioned. [[GitHub]](https://github.com/quantumblacklabs/kedro)
 - Google/jax: Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more [[GitHub]](https://github.com/google/jax)
 - CuPy: NumPy-like API accelerated with CUDA [[GitHub]](https://github.com/cupy/cupy)
@@ -192,13 +201,13 @@ A curated list of research in machine learning system. Link to the code if avail
 - a-mma/AquilaDB: Resilient, Replicated, Decentralized, Host neutral vector database to store Feature Vectors along with JSON Metadata. Do similarity search from anywhere, even from the darkest rifts of Aquila. Production ready solution for Machine Learning engineers and Data scientists. [[GitHub]](https://github.com/a-mma/AquilaDB)
 - ShannonAI/service-streamer: Boosting your Web Services of Deep Learning Applications. [[GitHub]](https://github.com/ShannonAI/service-streamer)
 
-## Machine Learning System Papers (Training)
+### Distributed Training
 
 - Class materials for a distributed systems lecture series [[GitHub]](https://github.com/aphyr/distsys-class)
 
 - bytedance/byteps: A high performance and general PS framework for distributed training [[GitHub]](https://github.com/bytedance/byteps)
 
-### Training(Parallelism)
+#### Training(Parallelism)
 - Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks. [[Paper]](http://proceedings.mlr.press/v80/jia18a/jia18a.pdf) [[GitHub]](https://github.com/flexflow/FlexFlow)
   - Zhihao Jia, Sina Lin, Charles R. Qi, and Alex Aiken. (*ICML 2018*)
 - Mesh-TensorFlow: Deep Learning for Supercomputers [[Paper]](https://arxiv.org/pdf/1811.02084.pdf) [[GitHub]](https://github.com/tensorflow/mesh)
@@ -221,7 +230,7 @@ A curated list of research in machine learning system. Link to the code if avail
 [[GitHub]](https://github.com/uber/horovod)
 - Distributed machine learning infrastructure for large-scale robotics research [[GitHub]](https://github.com/google-research/tensor2robot) [[Blog]](https://ai.google/research/teams/brain/robotics/)
 
-### Training(Multi-jobs on cluster)
+#### Training (Multi-jobs on cluster)
 - Gandiva: Introspective cluster scheduling for deep learning. [[Paper]](https://www.usenix.org/system/files/osdi18-xiao.pdf)
   - Xiao, Wencong, et al. (*OSDI 2018*)
   - Summary: Improvet the efficency of hyper-parameter in cluster. Aware of hardware utilization.
@@ -232,12 +241,12 @@ A curated list of research in machine learning system. Link to the code if avail
   - Jeon, Myeongjae, Shivaram Venkataraman, Junjie Qian, Amar Phanishayee, Wencong Xiao, and Fan Yang
 - Slurm: A Highly Scalable Workload Manager [[GitHub]](https://github.com/SchedMD/slurm)
 
-## Model Database (Experiment Version Control)
+### Model Database (Experiment Version Control)
 - TRAINS - Auto-Magical Experiment Manager & Version Control for AI [[GitHub]](https://github.com/allegroai/trains)
 - ModelDB: A system to manage ML models [[GitHub]](https://github.com/mitdbg/modeldb) [[MIT short paper]](https://mitdbg.github.io/modeldb/papers/hilda_modeldb.pdf)
 - iterative/dvc: Data & models versioning for ML projects, make them shareable and reproducible [[GitHub]](https://github.com/iterative/dvc)
 
-## Model Serving
+### Model Serving
 - Deep Learning Inference Service at Microsoft [[Paper]](https://www.usenix.org/system/files/opml19papers-soifer.pdf)
   - J Soifer, et al. (*OptML2019*)
 - {PRETZEL}: Opening the Black Box of Machine Learning Prediction Serving Systems. [[Paper]](https://www.usenix.org/system/files/osdi18-lee.pdf)
@@ -274,7 +283,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Apache PredictionIO® is an open source Machine Learning Server built on top of a state-of-the-art open source stack for developers and data scientists to create predictive engines for any machine learning task [[Website]](http://predictionio.apache.org/)
 
 
-## Machine Learning System Papers (Inference)
+### Machine Learning System Papers (Inference)
 
 - TensorRT is a C++ library that facilitates high performance inference on NVIDIA GPUs and deep learning accelerators. [[GitHub]](https://github.com/NVIDIA/TensorRT)
 - Dynamic Space-Time Scheduling for GPU Inference [[Paper]](http://learningsys.org/nips18/assets/papers/102CameraReadySubmissionGPU_Virtualization%20(8).pdf)
@@ -288,8 +297,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - DeepCPU: Serving RNN-based Deep Learning Models 10x Faster [[Paper]](https://www.usenix.org/system/files/conference/atc18/atc18-zhang-minjia.pdf)
   - Minjia Zhang, Samyam Rajbhandari, Wenhan Wang, and Yuxiong He, Microsoft AI and Research (*ATC 2018*)
   
-  
-## Machine Learning Compiler
+### Machine Learning Compiler
 
 - TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
 [[Project Website]](https://tvm.ai/)
@@ -299,7 +307,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Tensorflow/mlir: "Multi-Level Intermediate Representation" Compiler Infrastructure [[GitHub]](https://github.com/tensorflow/mlir) [[Video]](https://www.youtube.com/watch?v=qzljG6DKgic)
 - PyTorch/glow： Compiler for Neural Network hardware accelerators [[GitHub]](https://github.com/pytorch/glow)
 
-## Machine Learning Infrastructure
+### Machine Learning Infrastructure
 - AI infrastructures list [[GitHub]](https://github.com/1duo/awesome-ai-infrastructures)
 - cortexlabs/cortex: Deploy machine learning applications without worrying about setting up infrastructure, managing dependencies, or orchestrating data pipelines. [[GitHub]](https://github.com/cortexlabs/cortex)
 - Osquery is a SQL powered operating system instrumentation, monitoring, and analytics framework. [[Facebook Project]](https://osquery.io/)
@@ -311,7 +319,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Ludwig is a toolbox built on top of TensorFlow that allows to train and test deep learning models without the need to write code. [[GitHub]](https://github.com/uber/ludwig)
 - intel-analytics/analytics-zoo Distributed Tensorflow, Keras and BigDL on Apache Spark [[GitHub]](https://github.com/intel-analytics/analytics-zoo)
 
-## AutoML System
+### AutoML System
 - Google vizier: A service for black-box optimization. [[Paper]](https://ai.google/research/pubs/pub46180.pdf) [[GitHub]](https://github.com/tobegit3hub/advisor)
   - Golovin, Daniel, et al. (*SIGMOD 2017*)
 - Taking human out of learning applications: A survey on automated machine learning. [[Must Read Survey]](https://arxiv.org/pdf/1810.13306.pdf)
@@ -323,8 +331,8 @@ A curated list of research in machine learning system. Link to the code if avail
 - Facebook/Ax: Adaptive experimentation is the machine-learning guided process of iteratively exploring a (possibly infinite) parameter space in order to identify optimal configurations in a resource-efficient manner. [[GitHub]](https://github.com/facebook/Ax)
 - DeepSwarm: DeepSwarm is an open-source library which uses Ant Colony Optimization to tackle the neural architecture search problem. [[GitHub]](https://github.com/Pattio/DeepSwarm)
 - Google/AdaNet: AdaNet is a lightweight TensorFlow-based framework for automatically learning high-quality models with minimal expert. Importantly, AdaNet provides a general framework for not only learning a neural network architecture, but also for learning to ensemble to obtain even better models. [[GitHub]](https://github.com/tensorflow/adanet) 
-    
-## Deep Reinforcement Learning System
+  
+### Deep Reinforcement Learning System
 
 - Ray: A Distributed Framework for Emerging {AI} Applications [[GitHub]](https://www.usenix.org/conference/osdi18/presentation/moritz)
   - Moritz, Philipp, et al. (*OSDI 2018*)
@@ -338,9 +346,9 @@ A curated list of research in machine learning system. Link to the code if avail
   - Schaarschmidt, Michael, Sven Mika, Kai Fricke, and Eiko Yoneki. (*SysML 2019*)
   - Summary:
 
-## Video System
+### Video System
 
-### Tools
+#### Tools
 - VideoFlow: Python framework that facilitates the quick development of complex video analysis applications and other series-processing based applications in a multiprocessing environment. [[GitHub]](https://github.com/videoflow/videoflow)
 - VidGear: Powerful Multi-Threaded OpenCV and FFmpeg based Turbo Video Processing Python Library with unique State-of-the-Art Features. [[GitHub]](https://github.com/abhiTronix/vidgear)
 - NVIDIA DALI: A library containing both highly optimized building blocks and an execution engine for data pre-processing in deep learning applications [[GitHub]](https://github.com/NVIDIA/DALI)
@@ -349,7 +357,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Pretrained image and video models for Pytorch. [[GitHub]](https://github.com/alexandonian/pretorched-x)
 - LiveDetect - Live video client to DeepDetect. [[GitHub]](https://github.com/jolibrain/livedetect)
 
-### Papers
+#### Papers
 
 - Puffer: Puffer is a Stanford University research study about using machine learning to improve video-streaming algorithms. Please visit [[GitHub]](https://github.com/StanfordSNR/puffer)
 - Visual Road: A Video Data Management Benchmark [[Project Website]](http://db.cs.washington.edu/projects/visualroad/)
@@ -379,7 +387,7 @@ A curated list of research in machine learning system. Link to the code if avail
   - Yeo, H., Jung, Y., Kim, J., Shin, J. and Han, D., 2018.  (*OSDI 2018*)
   - Summary: Combine video super-resolution and ABR
   
-## Edge or Mobile Papers
+### Edge or Mobile Papers
 - Mobile Computer Vision @ Facebook [[GitHub]](https://github.com/facebookresearch/mobile-vision)
 - Neurosurgeon: Collaborative intelligence between the cloud and mobile edge. [[Paper]](http://web.eecs.umich.edu/~jahausw/publications/kang2017neurosurgeon.pdf)
   - Kang, Y., Hauswald, J., Gao, C., Rovinski, A., Mudge, T., Mars, J. and Tang, L., 2017, April. 
@@ -397,18 +405,18 @@ A curated list of research in machine learning system. Link to the code if avail
 - XiaoMi/mobile-ai-bench: Benchmarking Neural Network Inference on Mobile Devices [[GitHub]](https://github.com/XiaoMi/mobile-ai-bench)
 - XiaoMi/mace-models: Mobile AI Compute Engine Model Zoo [[GitHub]](https://github.com/XiaoMi/mace-models)
   
-## Resource Management
+### Resource Management
 
 - Resource management with deep reinforcement learning [[Paper]](https://people.csail.mit.edu/alizadeh/papers/deeprm-hotnets16.pdf) [[GitHub]](https://github.com/hongzimao/deeprm)
   - Mao, Hongzi, Mohammad Alizadeh, Ishai Menache, and Srikanth Kandula (*ACM HotNets 2016*)
   - Summary:  Highly cited paper. Nice definaton. An example solution that translates the problem of packing tasks with multiple resource demands into a learning problem and then used DRL to solve it.
 
-## Advanced Theory
+### Advanced Theory
 
 - Differentiable MPC for End-to-end Planning and Control [[Paper]](https://www.cc.gatech.edu/~bboots3/files/DMPC.pdf)  [[GitHub]](https://locuslab.github.io/mpc.pytorch/)
   - Amos, Brandon, Ivan Jimenez, Jacob Sacks, Byron Boots, and J. Zico Kolter (*NIPS 2018*)
   
-## Traditional System Optimization Papers
+### Traditional System Optimization Papers
 
 - AutoScale: Dynamic, Robust Capacity Management for Multi-Tier Data Centers
 [[Paper]](https://www3.cs.stonybrook.edu/~anshul/tocs12.pdf)
