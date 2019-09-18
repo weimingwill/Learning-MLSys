@@ -7,7 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/HuaizhengZhang/Awesome-System-for-Machine-Learning.svg?style=social)](https://GitHub.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/stargazers/)
 
 
-# Awesome System for Machine Learning 
+# Awesome System for Machine Learning
 
 ### *Path to system for AI* [[Whitepaper You Must Read]](http://www.sysml.cc/doc/sysml-whitepaper.pdf)
 
@@ -49,7 +49,7 @@ A curated list of research in machine learning system. Link to the code if avail
 ```
 - Title [[Paper]](link) [[GitHub]](link)
   - Author (*conference(journal) year*)
-  - Summary: 
+  - Summary:
 ```
 
 
@@ -73,9 +73,9 @@ A curated list of research in machine learning system. Link to the code if avail
   - Bailis, Peter, Kunle Olukotun, Christopher Ré, and Matei Zaharia. (*preprint 2017*)
 - Hidden technical debt in machine learning systems [[Paper]](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)
   - Sculley, David, et al. (*NIPS 2015*)
-  - Summary: 
+  - Summary:
 - End-to-end arguments in system design [[Paper]](http://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf)
-  - Saltzer, Jerome H., David P. Reed, and David D. Clark. 
+  - Saltzer, Jerome H., David P. Reed, and David D. Clark.
 - System Design for Large Scale Machine Learning [[Thesis]](http://shivaram.org/publications/shivaram-dissertation.pdf)
 - Deep Learning Inference in Facebook Data Centers: Characterization, Performance Optimizations and Hardware Implications [[Paper]](https://arxiv.org/pdf/1811.09886.pdf)
   - Park, Jongsoo, Maxim Naumov, Protonu Basu et al. *arXiv 2018*
@@ -184,9 +184,83 @@ A curated list of research in machine learning system. Link to the code if avail
 - Bistro: Scheduling Data-Parallel Jobs Against Live Production Systems [[Facebook Project]](https://github.com/facebook/bistro)
 - GNES is Generic Neural Elastic Search, a cloud-native semantic search system based on deep neural network. [[GitHub]](https://github.com/gnes-ai/gnes)
 
+### Conferences
+
+* NIPS
+* ICML
+* SOSP
+
+
+
 
 
 ## Papers
+
+### Backlog
+
+#### **Parallel & Distributed Learning**
+
+- ParMAC: Distributed Optimisation of Nested Functions, with Application to Learning Binary Autoencoders [[Paper]](https://www.sysml.cc/doc/2019/152.pdf) [[Youtube]](https://www.youtube.com/watch?v=3iz0o3H1pKw)
+
+  * Miguel A Carreira-Perpinan (UC Merced), Mehdi Alizadeh (UC Merced) (SysML 2019)
+
+- TicTac: Accelerating Distributed Deep Learning with Communication Scheduling [Paper](https://www.sysml.cc/doc/2019/199.pdf)[[Youtbe]](https://www.youtube.com/watch?v=p5SeQ1tfHSY)
+
+  * Sayed Hadi Hashemi (University of Illinois at Urbana-Champaign), Sangeetha Abdu Jyothi (University of Illinois at Urbana-Champaign), Roy Campbell (University of Illinois at Urbana-Champaign  (SysML 2019)
+
+- Priority-based Parameter Propagation for Distributed DNN Training [Paper](https://www.sysml.cc/doc/2019/75.pdf) [[Youtbe]](https://www.youtube.com/watch?v=GCsTYVLwzZs)
+
+  * Anand Jayarajan (University of British Columbia), Jinliang Wei (Carnegie Mellon University), Garth Gibson (Carnegie Mellon University), Alexandra Fedorova (University of British Columbia), Gennady Pekhimenko (University of Toronto) (SysML 2019)
+
+- BlueConnect: Decomposing All-Reduce for Deep Learning on Heterogeneous Network Hierarchy [Paper](https://www.sysml.cc/doc/2019/130.pdf) [[Youtbe]](https://www.youtube.com/watch?v=7XnVJL0YSD8)
+
+  * Minsik Cho (IBM Research), Ulrich Finkler (IBM Research), David Kung (IBM Research) (SysML 2019)
+
+- Beyond Data and Model Parallelism for Deep Neural Networks [Paper](https://www.sysml.cc/doc/2019/16.pdf) [[Youtbe]](https://www.youtube.com/watch?v=81l6kkV-OkE)
+
+  * Zhihao Jia (Stanford University), Matei Zaharia (Stanford University), Alex Aiken (Stanford University) (SysML 2019)
+
+- 3LC: Lightweight and Effective Traffic Compression for Distributed Machine Learning [Paper](https://www.sysml.cc/doc/2019/32.pdf) [[Youtbe]](https://www.sysml.cc/index.html)
+
+  * Hyeontaek Lim (Google Brain), David G Andersen (Carnegie Mellon University), Michael Kaminsky (Intel Labs) (SysML 2019)
+
+- Adaptive Communication Strategies to Achieve the Best Error-Runtime Trade-off in Local-Update SGD [Paper](https://www.sysml.cc/doc/2019/124.pdf) [[Youtbe]](https://www.youtube.com/watch?v=RTGb-sbK19s)
+
+  * Jianyu Wang (Carnegie Mellon University), Gauri Joshi (Carnegie Mellon University) (SysML 2019)
+
+- YellowFin and the Art of Momentum Tuning [Paper](https://www.sysml.cc/doc/2019/153.pdf) [[Youtbe]](https://www.youtube.com/watch?v=Kef2tLXuGy0)
+
+  * Jian Zhang (Stanford University), Ioannis Mitliagkas (University of Montreal) (SysML 2019)
+
+- ✅👍 [TVM: End-to-End Compilation Stack for Deep Learning](https://youtu.be/I1APhlSjVjs)
+  * Tianqi Chen (SysML2018)
+  - Summary:
+    * Goal: a framework that supports end-to-end training of different frameworks (tensorflow, pytorch, keras...) on different types of hardwares (metal, x86, arm etc...)
+    * Solution: TVM, which consists of computaional graph, graph optimizations, tensor expression language, and schdule primitives optimization
+
+- ✅ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
+  * Arya Mazumdar (SysML2018)
+  - Summary:
+    * Goal: to solve the problem caused by straggling workers in large distributed system.
+    * Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
+
+- ✅ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
+
+  * Jonathan Binas (SysML2018)
+  * Summary
+    * Goal: use analog electronic to simulate deep networks
+    * Result: analog electronic can represent non-linear, sumation, etc operations in deep learning quite easily. Representation of deep networks using analog electronic can be quite efficient, thus, digital representation add a layer on top of silicon may not be necessary.
+
+- ✅ [YellowFin: Adaptive Optimization for (A)synchronous Systems](https://youtu.be/Etp3yZgfIqc)
+
+  - Ioannis Mitliagkas (SysML2018)
+
+  - Summary
+
+    - Goal: tunning is time consuming and painful for large data set with very complex model. Instead of select model and do hyperparameter tuning on each one of them, we should have a way to quickly select the model and do fine-tuning on the final model.
+    - Problem: momemtum is important, but it is not tuned.
+    - Result: auto-tuning optimizer based on momentum SGD which requires no manual specification of learning rate and momentum.
+
 
 ### Data Processing
 
@@ -225,8 +299,8 @@ A curated list of research in machine learning system. Link to the code if avail
   - Gao, Yuanxiang, Li Chen, and Baochun Li (*ICML 18*)
 - GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism [[Paper]](https://arxiv.org/pdf/1811.06965.pdf)[[GitHub]](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) [[News]](https://www.cnbeta.com/articles/tech/824495.htm)
   - Huang, Yanping, et al. (*arXiv preprint arXiv:1811.06965 (2018)*)
-  - Summary: 
-- Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch. 
+  - Summary:
+- Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch.
 [[GitHub]](https://github.com/uber/horovod)
 - Distributed machine learning infrastructure for large-scale robotics research [[GitHub]](https://github.com/google-research/tensor2robot) [[Blog]](https://ai.google/research/teams/brain/robotics/)
 
@@ -262,7 +336,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Clipper: A Low-Latency Online Prediction Serving System [[Paper]](https://www.usenix.org/system/files/conference/nsdi17/nsdi17-crankshaw.pdf)
 [[GitHub]](https://github.com/ucbrise/clipper)
   - Crankshaw, Daniel, et al. (*NSDI 2017*)
-  - Summary: Adaptive batch 
+  - Summary: Adaptive batch
 - InferLine: ML Inference Pipeline Composition Framework [[Paper]](https://arxiv.org/pdf/1812.01776.pdf)
   - Crankshaw, Daniel, et al. (*Preprint*)
   - Summary: update version of Clipper
@@ -288,7 +362,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - TensorRT is a C++ library that facilitates high performance inference on NVIDIA GPUs and deep learning accelerators. [[GitHub]](https://github.com/NVIDIA/TensorRT)
 - Dynamic Space-Time Scheduling for GPU Inference [[Paper]](http://learningsys.org/nips18/assets/papers/102CameraReadySubmissionGPU_Virtualization%20(8).pdf)
   - Jain, Paras, et al. (*NIPS 18, System for ML*)
-  - Summary: 
+  - Summary:
 - Dynamic Scheduling For Dynamic Control Flow in Deep Learning Systems [[Paper]](http://www.cs.cmu.edu/~jinlianw/papers/dynamic_scheduling_nips18_sysml.pdf)
   - Wei, Jinliang, Garth Gibson, Vijay Vasudevan, and Eric Xing. (*On going*)
 - Accelerating Deep Learning Workloads through Efficient Multi-Model Execution. [[Paper]](https://cs.stanford.edu/~matei/papers/2018/mlsys_hivemind.pdf)
@@ -296,7 +370,7 @@ A curated list of research in machine learning system. Link to the code if avail
   - Summary: They assume that their system, HiveMind, is given as input models grouped into model batches that are amenable to co-optimization and co-execution. a compiler, and a runtime.
 - DeepCPU: Serving RNN-based Deep Learning Models 10x Faster [[Paper]](https://www.usenix.org/system/files/conference/atc18/atc18-zhang-minjia.pdf)
   - Minjia Zhang, Samyam Rajbhandari, Wenhan Wang, and Yuxiong He, Microsoft AI and Research (*ATC 2018*)
-  
+
 ### Machine Learning Compiler
 
 - TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
@@ -330,8 +404,8 @@ A curated list of research in machine learning system. Link to the code if avail
 - AutoKeras: Accessible AutoML for deep learning. [[GitHub]](https://github.com/keras-team/autokeras)
 - Facebook/Ax: Adaptive experimentation is the machine-learning guided process of iteratively exploring a (possibly infinite) parameter space in order to identify optimal configurations in a resource-efficient manner. [[GitHub]](https://github.com/facebook/Ax)
 - DeepSwarm: DeepSwarm is an open-source library which uses Ant Colony Optimization to tackle the neural architecture search problem. [[GitHub]](https://github.com/Pattio/DeepSwarm)
-- Google/AdaNet: AdaNet is a lightweight TensorFlow-based framework for automatically learning high-quality models with minimal expert. Importantly, AdaNet provides a general framework for not only learning a neural network architecture, but also for learning to ensemble to obtain even better models. [[GitHub]](https://github.com/tensorflow/adanet) 
-  
+- Google/AdaNet: AdaNet is a lightweight TensorFlow-based framework for automatically learning high-quality models with minimal expert. Importantly, AdaNet provides a general framework for not only learning a neural network architecture, but also for learning to ensemble to obtain even better models. [[GitHub]](https://github.com/tensorflow/adanet)
+
 ### Deep Reinforcement Learning System
 
 - Ray: A Distributed Framework for Emerging {AI} Applications [[GitHub]](https://www.usenix.org/conference/osdi18/presentation/moritz)
@@ -371,10 +445,10 @@ A curated list of research in machine learning system. Link to the code if avail
   - Summary: Configuration controller for balancing accuracy and resource. Golden configuration is a good design. Periodic profiling often exceeded any resource savings gained by adapting the configurations.
 - Noscope: optimizing neural network queries over video at scale [[Paper]](https://arxiv.org/pdf/1703.02529) [[GitHub]](https://github.com/stanford-futuredata/noscope)
   - Kang, Daniel, John Emmons, Firas Abuzaid, Peter Bailis, and Matei Zaharia. (*VLDB2017*)
-  - Summary: 
+  - Summary:
 - SVE: Distributed video processing at Facebook scale [[Paper]](http://www.cs.princeton.edu/~wlloyd/papers/sve-sosp17.pdf)
   - Huang, Qi, et al. (*SOSP2017*)
-  - Summary: 
+  - Summary:
 - Scanner: Efficient Video Analysis at Scale [[Paper]](http://graphics.stanford.edu/papers/scanner/poms18_scanner.pdf)[[GitHub]](https://github.com/scanner-research/scanner)
   - Poms, Alex, Will Crichton, Pat Hanrahan, and Kayvon Fatahalian (*SIGGRAPH 2018*)
   - Summary:
@@ -382,15 +456,15 @@ A curated list of research in machine learning system. Link to the code if avail
   - Wang, Yongzhe, et al. (*ICIP 2016*)
 - Rosetta: Large scale system for text detection and recognition in images [[Paper]](https://research.fb.com/wp-content/uploads/2018/10/Rosetta-Large-scale-system-for-text-detection-and-recognition-in-images.pdf)
   - Borisyuk, Fedor, Albert Gordo, and Viswanath Sivakumar. (*KDD 2018*)
-  - Summary: 
+  - Summary:
 - Neural adaptive content-aware internet video delivery. [[Paper]](https://www.usenix.org/system/files/osdi18-yeo.pdf) [[GitHub]](https://github.com/kaist-ina/NAS_public)
   - Yeo, H., Jung, Y., Kim, J., Shin, J. and Han, D., 2018.  (*OSDI 2018*)
   - Summary: Combine video super-resolution and ABR
-  
+
 ### Edge or Mobile Papers
 - Mobile Computer Vision @ Facebook [[GitHub]](https://github.com/facebookresearch/mobile-vision)
 - Neurosurgeon: Collaborative intelligence between the cloud and mobile edge. [[Paper]](http://web.eecs.umich.edu/~jahausw/publications/kang2017neurosurgeon.pdf)
-  - Kang, Y., Hauswald, J., Gao, C., Rovinski, A., Mudge, T., Mars, J. and Tang, L., 2017, April. 
+  - Kang, Y., Hauswald, J., Gao, C., Rovinski, A., Mudge, T., Mars, J. and Tang, L., 2017, April.
   - In ACM SIGARCH Computer Architecture News (Vol. 45, No. 1, pp. 615-629). ACM.
 - 26ms Inference Time for ResNet-50: Towards Real-Time Execution of all DNNs on Smartphone [[Paper]](https://arxiv.org/pdf/1905.00571.pdf)
   - Wei Niu, Xiaolong Ma, Yanzhi Wang, Bin Ren (*ICML2019*)
@@ -404,7 +478,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - alibaba/MNN: MNN is a lightweight deep neural network inference engine. It loads models and do inference on devices. [[GitHub]](https://github.com/alibaba/MNN)
 - XiaoMi/mobile-ai-bench: Benchmarking Neural Network Inference on Mobile Devices [[GitHub]](https://github.com/XiaoMi/mobile-ai-bench)
 - XiaoMi/mace-models: Mobile AI Compute Engine Model Zoo [[GitHub]](https://github.com/XiaoMi/mace-models)
-  
+
 ### Resource Management
 
 - Resource management with deep reinforcement learning [[Paper]](https://people.csail.mit.edu/alizadeh/papers/deeprm-hotnets16.pdf) [[GitHub]](https://github.com/hongzimao/deeprm)
@@ -415,11 +489,11 @@ A curated list of research in machine learning system. Link to the code if avail
 
 - Differentiable MPC for End-to-end Planning and Control [[Paper]](https://www.cc.gatech.edu/~bboots3/files/DMPC.pdf)  [[GitHub]](https://locuslab.github.io/mpc.pytorch/)
   - Amos, Brandon, Ivan Jimenez, Jacob Sacks, Byron Boots, and J. Zico Kolter (*NIPS 2018*)
-  
+
 ### Traditional System Optimization Papers
 
 - AutoScale: Dynamic, Robust Capacity Management for Multi-Tier Data Centers
 [[Paper]](https://www3.cs.stonybrook.edu/~anshul/tocs12.pdf)
   - Gandhi, Anshul, et al. (*TOCS 2012*)
 - Large-scale cluster management at Google with Borg [[Paper]](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43438.pdf)
-  - Verma, Abhishek, et al. (*ECCS2015*)
+  - Verma, Abhishek, et al. (*ECCS2015*)<!---->
