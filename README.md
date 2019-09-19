@@ -189,6 +189,7 @@ A curated list of research in machine learning system. Link to the code if avail
 * NIPS
 * ICML
 * SOSP
+* SysML
 
 
 
@@ -197,6 +198,10 @@ A curated list of research in machine learning system. Link to the code if avail
 ## Papers
 
 ### Backlog
+
+[SysML 2018](https://www.sysml.cc/2018/index.html): accepted posters not read.
+
+
 
 #### **Parallel & Distributed Learning**
 
@@ -238,13 +243,13 @@ A curated list of research in machine learning system. Link to the code if avail
     * Goal: a framework that supports end-to-end training of different frameworks (tensorflow, pytorch, keras...) on different types of hardwares (metal, x86, arm etc...)
     * Solution: TVM, which consists of computaional graph, graph optimizations, tensor expression language, and schdule primitives optimization
 
-- ✅ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
+- ☑️ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
   * Arya Mazumdar (SysML2018)
   - Summary:
     * Goal: to solve the problem caused by straggling workers in large distributed system.
     * Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
 
-- ✅ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
+- ☑️ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
 
   * Jonathan Binas (SysML2018)
   * Summary
@@ -260,6 +265,27 @@ A curated list of research in machine learning system. Link to the code if avail
     - Goal: tunning is time consuming and painful for large data set with very complex model. Instead of select model and do hyperparameter tuning on each one of them, we should have a way to quickly select the model and do fine-tuning on the final model.
     - Problem: momemtum is important, but it is not tuned.
     - Result: auto-tuning optimizer based on momentum SGD which requires no manual specification of learning rate and momentum.
+  
+- ☑️ [Understanding the Limitations of Current Energy-Efficient Design Approaches for Deep Neural Networks](https://youtu.be/XCdy5egmvaU)
+
+  - Yu-Hsin Chen, Tien-Ju Yang, Joel Emer, Vivienne Sze (SysML 2018)
+  - Summary
+    - Goal: to improve energy efficiency of DNN and keep accuracy at the same time. Improvement of network structure does not necessary improve the energy efficiency of DNN training. For example, AlexNet is more energy efficient than SqueezeNet which is a network-pruned version of AlexNet.
+    - Result: Flexible energy-efficient hardward: Eyeriss. It supports wide range of filter shapes and sparsity, and different layers (CNN, FC). Balancing between flexibility and efficiency.
+
+- ✅ Towards High-Performance Prediction Serving Systems [[Paper]](https://www.sysml.cc/doc/2018/74.pdf) [[Youtube]](https://youtu.be/dajDaIUxBsM)
+
+  - Yunseong Lee, Alberto Scolari, Matteo Interlandi, Markus Weimer, Byung-Gon Chun (SysML 2018)
+  - Summary
+    - Goal: Serve requests for many models in one single box using as few resources as possible. With low latency while maintaining high throughputs.
+    - Solution: Current state-of-the-art approach use block box approach. While in order to achieve serving requests for many models with high performance, they make it white box. (Offline) Before prediction serving, cache operators' parameters from logical representation. (Online) At prediction time, physical stages are assembled from the Logical Representation. Each stage is composed of the parameters fetched from the Parameter Store, an event queue, and a thread-pool.
+
+- ✅ "I Like the Way You Think!" - Inspecting the Internal Logic of Recurrent Neural Networks [[Paper]](https://www.sysml.cc/doc/2018/38.pdf)[[Youtube]](https://youtu.be/ErLUbbspNRY)
+
+  - Thibault Sellam, Kevin Lin, Ian Yiran Huang, Carl Vondrick, Eugene Wu
+  - Summary
+    - Goal: to understand the internal logic of RNN. Neural nets are commonly treated as blackbox. How to understand the internal logic of it so that we can have interpretation.
+    - Solution: Luigi: Deep Nerual Inspection (DNI). The idea is model checking. Use hypothesis "functions" to match with trained model in the DNI. Identify high-level logic learned by units or groups of units.
 
 
 ### Data Processing
