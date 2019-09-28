@@ -1,21 +1,13 @@
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)](https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/graphs/commit-activity)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/HuaizhengZhang/Awesome-System-for-Machine-Learning.svg?color=red)](https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/graphs/commit-activity)
-[![Last Commit](https://img.shields.io/github/last-commit/HuaizhengZhang/Awesome-System-for-Machine-Learning.svg)](https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/commits/master)
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![GitHub license](https://img.shields.io/github/license/HuaizhengZhang/Awesome-System-for-Machine-Learning.svg?color=blue)](https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/HuaizhengZhang/Awesome-System-for-Machine-Learning.svg?style=social)](https://GitHub.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/stargazers/)
-
-
 # Awesome System for Machine Learning
 
-### *Path to system for AI* [[Whitepaper You Must Read]](http://www.sysml.cc/doc/sysml-whitepaper.pdf)
+A curated list of research in machine learning system, including tools, coureses and papers, etc.
 
-A curated list of research in machine learning system. Link to the code if available is also present. I also summarize some papers if I think they are really interesting.
+Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sysml.cc/doc/sysml-whitepaper.pdf)
 
-![AI system](https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning/blob/master/imgs/AI_system.png)
+
 
 ## Table of Contents
+
 ### Resources
 - [Survey](#survey)
 - [Book](#book)
@@ -24,22 +16,20 @@ A curated list of research in machine learning system. Link to the code if avail
 - [Blog](#blog)
 - [Tool](#userful-tools)
 - [Project with code](#project)
-### Papers
-
-#### System for AI
-- [Data Processing](#data-processing)
-- [Distributed Training](#machine-learning-system-papers-training)
+### System for ML
+- [Parallel & Distributed Leanring](#parallel-&-distributed-learning)
 - [Model Database](#model-database-experiment-version-control)
 - [Model Serving](#model-serving)
-- [Inference Optimization](#machine-learning-system-papers-inference)
+- [Training & Inference Optimization](#training-&-inference-optimization)
 - [Machine Learning Infrastructure](#machine-learning-infrastructure)
 - [Machine Learning Compiler](#machine-learning-compiler)
 - [AutoML System](#automl-system)
 - [Deep Reinforcement Learning System](#deep-reinforcement-learning-system)
-- [Edge AI](#edge-or-mobile-papers)
+- [Edge AI](#edge-ai)
 - [Video System](#video-system)
+- [Data Processing](#data-processing)
 
-#### AI for System
+### ML for System
 - [Resource Management](#resource-management)
 - [Advanced Theory](#advanced-theory)
 - [Traditional System Optimization](#traditional-system-optimization-papers)
@@ -116,6 +106,8 @@ A curated list of research in machine learning system. Link to the code if avail
 - CSci 8980: Machine Learning in Computer Systems [[University of Minnesota, Twin Cities]](http://www-users.cselabs.umn.edu/classes/Spring-2019/csci8980/)
 - Mu Li (MxNet, Parameter Server): Introduction to Deep Learning [[Best DL Course I think]](https://courses.d2l.ai/berkeley-stat-157/index.html)  [[Book]](https://www.d2l.ai/)
 - Tutorial code on how to build your own Deep Learning System in 2k Lines [[GitHub]](https://github.com/tqchen/tinyflow)
+- Distributed Systems
+  - Class materials for a distributed systems lecture series [[GitHub]](https://github.com/aphyr/distsys-class)
 
 ### Blog
 
@@ -195,119 +187,33 @@ A curated list of research in machine learning system. Link to the code if avail
 
 
 
-## Papers
+## System For ML
 
-### Backlog
+### Parallel & Distributed Learning
 
-[SysML 2018](https://www.sysml.cc/2018/index.html): accepted posters not read.
-
-
-
-#### **Parallel & Distributed Learning**
-
-- ParMAC: Distributed Optimisation of Nested Functions, with Application to Learning Binary Autoencoders [[Paper]](https://www.sysml.cc/doc/2019/152.pdf) [[Youtube]](https://www.youtube.com/watch?v=3iz0o3H1pKw)
-
-  * Miguel A Carreira-Perpinan (UC Merced), Mehdi Alizadeh (UC Merced) (SysML 2019)
-
-- TicTac: Accelerating Distributed Deep Learning with Communication Scheduling [Paper](https://www.sysml.cc/doc/2019/199.pdf)[[Youtbe]](https://www.youtube.com/watch?v=p5SeQ1tfHSY)
-
-  * Sayed Hadi Hashemi (University of Illinois at Urbana-Champaign), Sangeetha Abdu Jyothi (University of Illinois at Urbana-Champaign), Roy Campbell (University of Illinois at Urbana-Champaign  (SysML 2019)
-
-- Priority-based Parameter Propagation for Distributed DNN Training [Paper](https://www.sysml.cc/doc/2019/75.pdf) [[Youtbe]](https://www.youtube.com/watch?v=GCsTYVLwzZs)
-
-  * Anand Jayarajan (University of British Columbia), Jinliang Wei (Carnegie Mellon University), Garth Gibson (Carnegie Mellon University), Alexandra Fedorova (University of British Columbia), Gennady Pekhimenko (University of Toronto) (SysML 2019)
-
-- BlueConnect: Decomposing All-Reduce for Deep Learning on Heterogeneous Network Hierarchy [Paper](https://www.sysml.cc/doc/2019/130.pdf) [[Youtbe]](https://www.youtube.com/watch?v=7XnVJL0YSD8)
-
-  * Minsik Cho (IBM Research), Ulrich Finkler (IBM Research), David Kung (IBM Research) (SysML 2019)
-
-- Beyond Data and Model Parallelism for Deep Neural Networks [Paper](https://www.sysml.cc/doc/2019/16.pdf) [[Youtbe]](https://www.youtube.com/watch?v=81l6kkV-OkE)
-
-  * Zhihao Jia (Stanford University), Matei Zaharia (Stanford University), Alex Aiken (Stanford University) (SysML 2019)
-
-- 3LC: Lightweight and Effective Traffic Compression for Distributed Machine Learning [Paper](https://www.sysml.cc/doc/2019/32.pdf) [[Youtbe]](https://www.sysml.cc/index.html)
-
-  * Hyeontaek Lim (Google Brain), David G Andersen (Carnegie Mellon University), Michael Kaminsky (Intel Labs) (SysML 2019)
-
-- Adaptive Communication Strategies to Achieve the Best Error-Runtime Trade-off in Local-Update SGD [Paper](https://www.sysml.cc/doc/2019/124.pdf) [[Youtbe]](https://www.youtube.com/watch?v=RTGb-sbK19s)
-
-  * Jianyu Wang (Carnegie Mellon University), Gauri Joshi (Carnegie Mellon University) (SysML 2019)
-
-- YellowFin and the Art of Momentum Tuning [Paper](https://www.sysml.cc/doc/2019/153.pdf) [[Youtbe]](https://www.youtube.com/watch?v=Kef2tLXuGy0)
-
-  * Jian Zhang (Stanford University), Ioannis Mitliagkas (University of Montreal) (SysML 2019)
-
-- ✅👍 [TVM: End-to-End Compilation Stack for Deep Learning](https://youtu.be/I1APhlSjVjs)
-  * Tianqi Chen (SysML2018)
+#### Parallelism
+- ✅ ❓TicTac: Accelerating Distributed Deep Learning with Communication Scheduling [Paper](https://www.sysml.cc/doc/2019/199.pdf)[[Youtbe]](https://www.youtube.com/watch?v=p5SeQ1tfHSY)
+  - Sayed Hadi Hashemi (University of Illinois at Urbana-Champaign), Sangeetha Abdu Jyothi (University of Illinois at Urbana-Champaign), Roy Campbell (University of Illinois at Urbana-Champaign  (SysML 2019)
   - Summary:
-    * Goal: a framework that supports end-to-end training of different frameworks (tensorflow, pytorch, keras...) on different types of hardwares (metal, x86, arm etc...)
-    * Solution: TVM, which consists of computaional graph, graph optimizations, tensor expression language, and schdule primitives optimization
-
-- ☑️ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
-  * Arya Mazumdar (SysML2018)
+    - Goal: accelerate distributed DNN training in systems that rely on graph representation for computation
+    - Solution: reduces the iteration time by identifying and enforcing parameter transfers in the order in which the parameters are consumed by the underlying computational model
+- ✅ 👍 🗣 Priority-based Parameter Propagation for Distributed DNN Training [Paper](https://www.sysml.cc/doc/2019/75.pdf) [[Youtbe]](https://www.youtube.com/watch?v=GCsTYVLwzZs) 
+  - Anand Jayarajan (University of British Columbia), Jinliang Wei (Carnegie Mellon University), Garth Gibson (Carnegie Mellon University), Alexandra Fedorova (University of British Columbia), Gennady Pekhimenko (University of Toronto) (SysML 2019)
   - Summary:
-    * Goal: to solve the problem caused by straggling workers in large distributed system.
-    * Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
-
-- ☑️ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
-
-  * Jonathan Binas (SysML2018)
-  * Summary
-    * Goal: use analog electronic to simulate deep networks
-    * Result: analog electronic can represent non-linear, sumation, etc operations in deep learning quite easily. Representation of deep networks using analog electronic can be quite efficient, thus, digital representation add a layer on top of silicon may not be necessary.
-
-- ✅ [YellowFin: Adaptive Optimization for (A)synchronous Systems](https://youtu.be/Etp3yZgfIqc)
-
-  - Ioannis Mitliagkas (SysML2018)
-
-  - Summary
-
-    - Goal: tunning is time consuming and painful for large data set with very complex model. Instead of select model and do hyperparameter tuning on each one of them, we should have a way to quickly select the model and do fine-tuning on the final model.
-    - Problem: momemtum is important, but it is not tuned.
-    - Result: auto-tuning optimizer based on momentum SGD which requires no manual specification of learning rate and momentum.
-  
-- ☑️ [Understanding the Limitations of Current Energy-Efficient Design Approaches for Deep Neural Networks](https://youtu.be/XCdy5egmvaU)
-
-  - Yu-Hsin Chen, Tien-Ju Yang, Joel Emer, Vivienne Sze (SysML 2018)
-  - Summary
-    - Goal: to improve energy efficiency of DNN and keep accuracy at the same time. Improvement of network structure does not necessary improve the energy efficiency of DNN training. For example, AlexNet is more energy efficient than SqueezeNet which is a network-pruned version of AlexNet.
-    - Result: Flexible energy-efficient hardward: Eyeriss. It supports wide range of filter shapes and sparsity, and different layers (CNN, FC). Balancing between flexibility and efficiency.
-
+    - Problem: performance of distributed DNN is bounded by communication-heavy parameter sync step
+    - Solution:
+      - Parameter slicing: sync parameters at a finer granularity
+      - Priority-based Update: prioritize the synchronization for the layers that have higher priority
+- ✅ 👍 Beyond Data and Model Parallelism for Deep Neural Networks [Paper](https://www.sysml.cc/doc/2019/16.pdf) [[Youtbe]](https://www.youtube.com/watch?v=81l6kkV-OkE)
+  - Zhihao Jia (Stanford University), Matei Zaharia (Stanford University), Alex Aiken (Stanford University) (SysML 2019)
+  - Summary:
+    - Goal: Current approaches for distributed deep learning are mostly about data parallellism and model parallelism. Design new ways of parallelism to improve distributed deep learning speed.
+    - Solution: SOAP  (sample, operation, attribution and parameter) search space: find faster parallelization strategies. FlexFlow, a distributed framework that automatically finds efficient parallelization strategies in SOAP search space.
 - ✅ Towards High-Performance Prediction Serving Systems [[Paper]](https://www.sysml.cc/doc/2018/74.pdf) [[Youtube]](https://youtu.be/dajDaIUxBsM)
-
   - Yunseong Lee, Alberto Scolari, Matteo Interlandi, Markus Weimer, Byung-Gon Chun (SysML 2018)
   - Summary
     - Goal: Serve requests for many models in one single box using as few resources as possible. With low latency while maintaining high throughputs.
     - Solution: Current state-of-the-art approach use block box approach. While in order to achieve serving requests for many models with high performance, they make it white box. (Offline) Before prediction serving, cache operators' parameters from logical representation. (Online) At prediction time, physical stages are assembled from the Logical Representation. Each stage is composed of the parameters fetched from the Parameter Store, an event queue, and a thread-pool.
-
-- ✅ "I Like the Way You Think!" - Inspecting the Internal Logic of Recurrent Neural Networks [[Paper]](https://www.sysml.cc/doc/2018/38.pdf)[[Youtube]](https://youtu.be/ErLUbbspNRY)
-
-  - Thibault Sellam, Kevin Lin, Ian Yiran Huang, Carl Vondrick, Eugene Wu
-  - Summary
-    - Goal: to understand the internal logic of RNN. Neural nets are commonly treated as blackbox. How to understand the internal logic of it so that we can have interpretation.
-    - Solution: Luigi: Deep Nerual Inspection (DNI). The idea is model checking. Use hypothesis "functions" to match with trained model in the DNI. Identify high-level logic learned by units or groups of units.
-
-
-### Data Processing
-
-- Kedro is a workflow development tool that helps you build data pipelines that are robust, scalable, deployable, reproducible and versioned. [[GitHub]](https://github.com/quantumblacklabs/kedro)
-- Google/jax: Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more [[GitHub]](https://github.com/google/jax)
-- CuPy: NumPy-like API accelerated with CUDA [[GitHub]](https://github.com/cupy/cupy)
-- Modin: Speed up your Pandas workflows by changing a single line of code [[GitHub]](https://github.com/modin-project/modin)
-- Weld: Weld is a runtime for improving the performance of data-intensive applications. [[Project Website]](https://www.weld.rs/)
-- Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines [[Project Website]](http://halide-lang.org/)
-  - Jonathan Ragan-Kelley, Connelly Barnes, Andrew Adams, Sylvain Paris, Frédo Durand, Saman Amarasinghe. (*PLDI 2013*)
-  - Summary: Halide is a programming language designed to make it easier to write high-performance image and array processing code on modern machines.
-- a-mma/AquilaDB: Resilient, Replicated, Decentralized, Host neutral vector database to store Feature Vectors along with JSON Metadata. Do similarity search from anywhere, even from the darkest rifts of Aquila. Production ready solution for Machine Learning engineers and Data scientists. [[GitHub]](https://github.com/a-mma/AquilaDB)
-- ShannonAI/service-streamer: Boosting your Web Services of Deep Learning Applications. [[GitHub]](https://github.com/ShannonAI/service-streamer)
-
-### Distributed Training
-
-- Class materials for a distributed systems lecture series [[GitHub]](https://github.com/aphyr/distsys-class)
-
-- bytedance/byteps: A high performance and general PS framework for distributed training [[GitHub]](https://github.com/bytedance/byteps)
-
-#### Training(Parallelism)
 - Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks. [[Paper]](http://proceedings.mlr.press/v80/jia18a/jia18a.pdf) [[GitHub]](https://github.com/flexflow/FlexFlow)
   - Zhihao Jia, Sina Lin, Charles R. Qi, and Alex Aiken. (*ICML 2018*)
 - Mesh-TensorFlow: Deep Learning for Supercomputers [[Paper]](https://arxiv.org/pdf/1811.02084.pdf) [[GitHub]](https://github.com/tensorflow/mesh)
@@ -315,9 +221,6 @@ A curated list of research in machine learning system. Link to the code if avail
   - Summary: Data parallelism for language model
 - PyTorch-BigGraph: A Large-scale Graph Embedding System [[Paper]](https://arxiv.org/pdf/1903.12287.pdf) [[GitHub]](https://github.com/facebookresearch/PyTorch-BigGraph)
   - Lerer, Adam and Wu, Ledell and Shen, Jiajun and Lacroix, Timothee and Wehrstedt, Luca and Bose, Abhijit and Peysakhovich, Alex (*SysML 2019*)
-- Beyond data and model parallelism for deep neural networks [[Paper]](https://arxiv.org/pdf/1807.05358.pdf) [[GitHub]](https://github.com/jiazhihao/metaflow_sysml19)
-  - Jia, Zhihao, Matei Zaharia, and Alex Aiken. (*SysML 2019*)
-  - Summary: SOAP (sample, operation, attribution and parameter) parallelism. Operator graph, device topology and extution optimizer. MCMC search algorithm and excution simulator.
 - Device placement optimization with reinforcement learning [[Paper]](https://arxiv.org/pdf/1706.04972.pdf)
   - Mirhoseini, Azalia, Hieu Pham, Quoc V. Le, Benoit Steiner, Rasmus Larsen, Yuefeng Zhou, Naveen Kumar, Mohammad Norouzi, Samy Bengio, and Jeff Dean. (*ICML 17*)
   - Summary: Using REINFORCE learn a device placement policy. Group operations to excute. Need a lot of GPUs.
@@ -326,11 +229,12 @@ A curated list of research in machine learning system. Link to the code if avail
 - GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism [[Paper]](https://arxiv.org/pdf/1811.06965.pdf)[[GitHub]](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) [[News]](https://www.cnbeta.com/articles/tech/824495.htm)
   - Huang, Yanping, et al. (*arXiv preprint arXiv:1811.06965 (2018)*)
   - Summary:
-- Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch.
-[[GitHub]](https://github.com/uber/horovod)
+- Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch [[GitHub]](https://github.com/uber/horovod)
 - Distributed machine learning infrastructure for large-scale robotics research [[GitHub]](https://github.com/google-research/tensor2robot) [[Blog]](https://ai.google/research/teams/brain/robotics/)
+- bytedance/byteps
+  - A high performance and general PS framework for distributed training [[GitHub]](https://github.com/bytedance/byteps)
 
-#### Training (Multi-jobs on cluster)
+#### Multi-jobs on Cluster
 - Gandiva: Introspective cluster scheduling for deep learning. [[Paper]](https://www.usenix.org/system/files/osdi18-xiao.pdf)
   - Xiao, Wencong, et al. (*OSDI 2018*)
   - Summary: Improvet the efficency of hyper-parameter in cluster. Aware of hardware utilization.
@@ -341,14 +245,13 @@ A curated list of research in machine learning system. Link to the code if avail
   - Jeon, Myeongjae, Shivaram Venkataraman, Junjie Qian, Amar Phanishayee, Wencong Xiao, and Fan Yang
 - Slurm: A Highly Scalable Workload Manager [[GitHub]](https://github.com/SchedMD/slurm)
 
-### Model Database (Experiment Version Control)
-- TRAINS - Auto-Magical Experiment Manager & Version Control for AI [[GitHub]](https://github.com/allegroai/trains)
+### Model Database & Version Control
+
+- TRAINS: Auto-Magical Experiment Manager & Version Control for AI [[GitHub]](https://github.com/allegroai/trains)
 - ModelDB: A system to manage ML models [[GitHub]](https://github.com/mitdbg/modeldb) [[MIT short paper]](https://mitdbg.github.io/modeldb/papers/hilda_modeldb.pdf)
 - iterative/dvc: Data & models versioning for ML projects, make them shareable and reproducible [[GitHub]](https://github.com/iterative/dvc)
 
 ### Model Serving
-- Deep Learning Inference Service at Microsoft [[Paper]](https://www.usenix.org/system/files/opml19papers-soifer.pdf)
-  - J Soifer, et al. (*OptML2019*)
 - {PRETZEL}: Opening the Black Box of Machine Learning Prediction Serving Systems. [[Paper]](https://www.usenix.org/system/files/osdi18-lee.pdf)
   - Lee, Y., Scolari, A., Chun, B.G., Santambrogio, M.D., Weimer, M. and Interlandi, M., 2018. (*OSDI 2018*)
   - Summary:
@@ -383,7 +286,7 @@ A curated list of research in machine learning system. Link to the code if avail
 - Apache PredictionIO® is an open source Machine Learning Server built on top of a state-of-the-art open source stack for developers and data scientists to create predictive engines for any machine learning task [[Website]](http://predictionio.apache.org/)
 
 
-### Machine Learning System Papers (Inference)
+### Training & Inference Optimization
 
 - TensorRT is a C++ library that facilitates high performance inference on NVIDIA GPUs and deep learning accelerators. [[GitHub]](https://github.com/NVIDIA/TensorRT)
 - Dynamic Space-Time Scheduling for GPU Inference [[Paper]](http://learningsys.org/nips18/assets/papers/102CameraReadySubmissionGPU_Virtualization%20(8).pdf)
@@ -396,16 +299,24 @@ A curated list of research in machine learning system. Link to the code if avail
   - Summary: They assume that their system, HiveMind, is given as input models grouped into model batches that are amenable to co-optimization and co-execution. a compiler, and a runtime.
 - DeepCPU: Serving RNN-based Deep Learning Models 10x Faster [[Paper]](https://www.usenix.org/system/files/conference/atc18/atc18-zhang-minjia.pdf)
   - Minjia Zhang, Samyam Rajbhandari, Wenhan Wang, and Yuxiong He, Microsoft AI and Research (*ATC 2018*)
+- Deep Learning Inference Service at Microsoft [[Paper]](https://www.usenix.org/system/files/opml19papers-soifer.pdf)
+  - J Soifer, et al. (*OptML2019*)
 
 ### Machine Learning Compiler
 
-- TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
-[[Project Website]](https://tvm.ai/)
-  - {TVM}: An Automated End-to-End Optimizing Compiler for Deep Learning [[Paper]](https://www.usenix.org/system/files/osdi18-chen.pdf) [[YouTube]](https://www.youtube.com/watch?v=I1APhlSjVjs)
-    - Chen, Tianqi, et al. (*OSDI 2018*)
+- ✅👍 TVM: End-to-End Compilation Stack for Deep Learning  [[Paper]](https://www.usenix.org/system/files/osdi18-chen.pdf) [[YouTube]](https://youtu.be/I1APhlSjVjs) [[Project Website]](https://tvm.ai/)
+
+  - Tianqi Chen (SysML2018) (*OSDI 2018*)
+
+  - Summary:
+    - Goal: a framework that supports end-to-end training of different frameworks (tensorflow, pytorch, keras...) on different types of hardwares (metal, x86, arm etc...)
+    - Solution: TVM, which consists of computaional graph, graph optimizations, tensor expression language, and schdule primitives optimization
+
 - Facebook TC: Tensor Comprehensions (TC) is a fully-functional C++ library to automatically synthesize high-performance machine learning kernels using Halide, ISL and NVRTC or LLVM. [[GitHub]](https://github.com/facebookresearch/TensorComprehensions)
+
 - Tensorflow/mlir: "Multi-Level Intermediate Representation" Compiler Infrastructure [[GitHub]](https://github.com/tensorflow/mlir) [[Video]](https://www.youtube.com/watch?v=qzljG6DKgic)
-- PyTorch/glow： Compiler for Neural Network hardware accelerators [[GitHub]](https://github.com/pytorch/glow)
+
+- PyTorch/glow: Compiler for Neural Network hardware accelerators [[GitHub]](https://github.com/pytorch/glow)
 
 ### Machine Learning Infrastructure
 - AI infrastructures list [[GitHub]](https://github.com/1duo/awesome-ai-infrastructures)
@@ -487,8 +398,7 @@ A curated list of research in machine learning system. Link to the code if avail
   - Yeo, H., Jung, Y., Kim, J., Shin, J. and Han, D., 2018.  (*OSDI 2018*)
   - Summary: Combine video super-resolution and ABR
 
-### Edge or Mobile Papers
-- Mobile Computer Vision @ Facebook [[GitHub]](https://github.com/facebookresearch/mobile-vision)
+### Edge AI
 - Neurosurgeon: Collaborative intelligence between the cloud and mobile edge. [[Paper]](http://web.eecs.umich.edu/~jahausw/publications/kang2017neurosurgeon.pdf)
   - Kang, Y., Hauswald, J., Gao, C., Rovinski, A., Mudge, T., Mars, J. and Tang, L., 2017, April.
   - In ACM SIGARCH Computer Architecture News (Vol. 45, No. 1, pp. 615-629). ACM.
@@ -504,6 +414,32 @@ A curated list of research in machine learning system. Link to the code if avail
 - alibaba/MNN: MNN is a lightweight deep neural network inference engine. It loads models and do inference on devices. [[GitHub]](https://github.com/alibaba/MNN)
 - XiaoMi/mobile-ai-bench: Benchmarking Neural Network Inference on Mobile Devices [[GitHub]](https://github.com/XiaoMi/mobile-ai-bench)
 - XiaoMi/mace-models: Mobile AI Compute Engine Model Zoo [[GitHub]](https://github.com/XiaoMi/mace-models)
+- Mobile Computer Vision @ Facebook [[GitHub]](https://github.com/facebookresearch/mobile-vision)
+
+### Hardware
+
+### Debugging and Monitoring
+
+### Safety, Security, Privacy, Fairness, Interpretability, Accessibility
+
+### Data Processing
+
+- Kedro: a workflow development tool that helps you build data pipelines that are robust, scalable, deployable, reproducible and versioned. [[GitHub]](https://github.com/quantumblacklabs/kedro)
+- Google/jax: Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more [[GitHub]](https://github.com/google/jax)
+- CuPy: NumPy-like API accelerated with CUDA [[GitHub]](https://github.com/cupy/cupy)
+- Modin: Speed up your Pandas workflows by changing a single line of code [[GitHub]](https://github.com/modin-project/modin)
+- Weld: Weld is a runtime for improving the performance of data-intensive applications. [[Project Website]](https://www.weld.rs/)
+- Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines [[Project Website]](http://halide-lang.org/)
+  - Jonathan Ragan-Kelley, Connelly Barnes, Andrew Adams, Sylvain Paris, Frédo Durand, Saman Amarasinghe. (*PLDI 2013*)
+  - Summary: Halide is a programming language designed to make it easier to write high-performance image and array processing code on modern machines.
+- a-mma/AquilaDB: Resilient, Replicated, Decentralized, Host neutral vector database to store Feature Vectors along with JSON Metadata. Do similarity search from anywhere, even from the darkest rifts of Aquila. Production ready solution for Machine Learning engineers and Data scientists. [[GitHub]](https://github.com/a-mma/AquilaDB)
+- ShannonAI/service-streamer: Boosting your Web Services of Deep Learning Applications. [[GitHub]](https://github.com/ShannonAI/service-streamer)
+
+
+
+
+
+## ML For System
 
 ### Resource Management
 
@@ -518,8 +454,77 @@ A curated list of research in machine learning system. Link to the code if avail
 
 ### Traditional System Optimization Papers
 
-- AutoScale: Dynamic, Robust Capacity Management for Multi-Tier Data Centers
-[[Paper]](https://www3.cs.stonybrook.edu/~anshul/tocs12.pdf)
-  - Gandhi, Anshul, et al. (*TOCS 2012*)
+- AutoScale: Dynamic, Robust Capacity Management for Multi-Tier Data Centers [[Paper]](https://www3.cs.stonybrook.edu/~anshul/tocs12.pdf)
+- Gandhi, Anshul, et al. (*TOCS 2012*)
 - Large-scale cluster management at Google with Borg [[Paper]](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43438.pdf)
-  - Verma, Abhishek, et al. (*ECCS2015*)<!---->
+  - Verma, Abhishek, et al. (*ECCS2015*)
+
+
+
+## Backlog
+
+[SysML 2018](https://www.sysml.cc/2018/index.html): accepted posters not read.
+
+
+
+#### **Parallel & Distributed Learning**
+
+- ParMAC: Distributed Optimisation of Nested Functions, with Application to Learning Binary Autoencoders [[Paper]](https://www.sysml.cc/doc/2019/152.pdf) [[Youtube]](https://www.youtube.com/watch?v=3iz0o3H1pKw)
+
+  - Miguel A Carreira-Perpinan (UC Merced), Mehdi Alizadeh (UC Merced) (SysML 2019)
+
+- ☑️❓ BlueConnect: Decomposing All-Reduce for Deep Learning on Heterogeneous Network Hierarchy [Paper](https://www.sysml.cc/doc/2019/130.pdf) [[Youtbe]](https://www.youtube.com/watch?v=7XnVJL0YSD8)
+
+  - Minsik Cho (IBM Research), Ulrich Finkler (IBM Research), David Kung (IBM Research) (SysML 2019)
+  - Summary:
+    - Problem: Communication bandwidth is the bottleneck for distributed DNN. Prior approaches, such as ring-based allreduce, two-step approach does not well solve the problem.
+    - Solution: BlueConnect, a communication library for distributed deep learning that is highly optimized for popular GPU-based platforms. BlueConnect decomposes a single all-reduce operation into a large number of parallelizable reduce-scatter and all-gather operations to exploit the trade-off between latency and bandwidth, and adapt to a variety of network configurations.
+
+- 3LC: Lightweight and Effective Traffic Compression for Distributed Machine Learning [Paper](https://www.sysml.cc/doc/2019/32.pdf) [[Youtbe]](https://www.sysml.cc/index.html)
+
+  - Hyeontaek Lim (Google Brain), David G Andersen (Carnegie Mellon University), Michael Kaminsky (Intel Labs) (SysML 2019)
+
+- Adaptive Communication Strategies to Achieve the Best Error-Runtime Trade-off in Local-Update SGD [Paper](https://www.sysml.cc/doc/2019/124.pdf) [[Youtbe]](https://www.youtube.com/watch?v=RTGb-sbK19s)
+
+  - Jianyu Wang (Carnegie Mellon University), Gauri Joshi (Carnegie Mellon University) (SysML 2019)
+
+- YellowFin and the Art of Momentum Tuning [Paper](https://www.sysml.cc/doc/2019/153.pdf) [[Youtbe]](https://www.youtube.com/watch?v=Kef2tLXuGy0)
+
+  - Jian Zhang (Stanford University), Ioannis Mitliagkas (University of Montreal) (SysML 2019)
+
+- ☑️ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
+
+  - Arya Mazumdar (SysML2018)
+
+  - Summary:
+    - Goal: to solve the problem caused by straggling workers in large distributed system.
+    - Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
+
+- ☑️ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
+
+  - Jonathan Binas (SysML2018)
+  - Summary
+    - Goal: use analog electronic to simulate deep networks
+    - Result: analog electronic can represent non-linear, sumation, etc operations in deep learning quite easily. Representation of deep networks using analog electronic can be quite efficient, thus, digital representation add a layer on top of silicon may not be necessary.
+
+- ✅ [YellowFin: Adaptive Optimization for (A)synchronous Systems](https://youtu.be/Etp3yZgfIqc)
+
+  - Ioannis Mitliagkas (SysML2018)
+  - Summary
+    - Goal: tunning is time consuming and painful for large data set with very complex model. Instead of select model and do hyperparameter tuning on each one of them, we should have a way to quickly select the model and do fine-tuning on the final model.
+    - Problem: momemtum is important, but it is not tuned.
+    - Result: auto-tuning optimizer based on momentum SGD which requires no manual specification of learning rate and momentum.
+
+- ☑️ [Understanding the Limitations of Current Energy-Efficient Design Approaches for Deep Neural Networks](https://youtu.be/XCdy5egmvaU)
+
+  - Yu-Hsin Chen, Tien-Ju Yang, Joel Emer, Vivienne Sze (SysML 2018)
+  - Summary
+    - Goal: to improve energy efficiency of DNN and keep accuracy at the same time. Improvement of network structure does not necessary improve the energy efficiency of DNN training. For example, AlexNet is more energy efficient than SqueezeNet which is a network-pruned version of AlexNet.
+    - Result: Flexible energy-efficient hardward: Eyeriss. It supports wide range of filter shapes and sparsity, and different layers (CNN, FC). Balancing between flexibility and efficiency.
+
+- ✅ "I Like the Way You Think!" - Inspecting the Internal Logic of Recurrent Neural Networks [[Paper]](https://www.sysml.cc/doc/2018/38.pdf)[[Youtube]](https://youtu.be/ErLUbbspNRY)
+
+  - Thibault Sellam, Kevin Lin, Ian Yiran Huang, Carl Vondrick, Eugene Wu
+  - Summary
+    - Goal: to understand the internal logic of RNN. Neural nets are commonly treated as blackbox. How to understand the internal logic of it so that we can have interpretation.
+    - Solution: Luigi: Deep Nerual Inspection (DNI). The idea is model checking. Use hypothesis "functions" to match with trained model in the DNI. Identify high-level logic learned by units or groups of units.
