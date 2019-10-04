@@ -4,6 +4,8 @@ A curated list of research in machine learning system, including tools, coureses
 
 Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sysml.cc/doc/sysml-whitepaper.pdf)
 
+[System ML Mindmap](https://raw.githubusercontent.com/weimingwill/Awesome-System-for-Machine-Learning/master/imgs/System_ML.png)
+
 
 
 ## Table of Contents
@@ -81,6 +83,8 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 - Machine Learning Systems: Designs that scale [[Website]](https://www.manning.com/books/machine-learning-systems)
 
 ### Video
+- 👍👍 Flexible systems are the next frontier of machine learning [[Youtube]](https://www.youtube.com/watch?v=Jnunp-EymJQ&list=WL&index=12)
+  - Jeff Dean & Chris Re @ Standford
 - Introduction to Microservices, Docker, and Kubernetes [[YouTube]](https://www.youtube.com/watch?v=1xo-0gCVhTU)
 - ICML Keynote: Lessons Learned from Helping 200,000 non-ML experts use ML [[Video]](https://slideslive.com/38916584/keynote-lessons-learned-from-helping-200000-nonml-experts-use-ml)
 - Adaptive & Multitask Learning Systems [[Website]](https://www.amtl-workshop.org/schedule)
@@ -97,6 +101,9 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 - ScaledML 2018: Jeff Dean, Ion Stoica, Yangqing Jia and so on [[YouTube]](https://www.youtube.com/playlist?list=PLRM2gQVaW_wW9KAxcibxdqY_TDyvmEjzm) [[Slides]](https://www.matroid.com/blog/post/slides-and-videos-from-scaledml-2018)
 - A New Golden Age for Computer Architecture History, Challenges, and Opportunities. David Patterson [[YouTube]](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s)
 - How to Have a Bad Career. David Patterson (I am a big fan) [[YouTube]](https://www.youtube.com/watch?v=Rn1w4MRHIhc)
+- 👍 Northstar: interactive data science platform that rethinks how people interact with data. [[Website & Video]](http://northstar.mit.edu/)
+  -  It empowers users without programming experience, background in statistics or machine learning expertise to explore and mine data through an intuitive user interface, and effortlessly build, analyze, and evaluate machine learning (ML) pipelines.
+  - Very cool tool
 
 ### Course
 
@@ -214,13 +221,26 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
   - Summary
     - Goal: Serve requests for many models in one single box using as few resources as possible. With low latency while maintaining high throughputs.
     - Solution: Current state-of-the-art approach use block box approach. While in order to achieve serving requests for many models with high performance, they make it white box. (Offline) Before prediction serving, cache operators' parameters from logical representation. (Online) At prediction time, physical stages are assembled from the Logical Representation. Each stage is composed of the parameters fetched from the Parameter Store, an event queue, and a thread-pool.
+- ☑️ 3LC: Lightweight and Effective Traffic Compression for Distributed Machine Learning [Paper](https://www.sysml.cc/doc/2019/32.pdf) [[Youtbe]](https://www.sysml.cc/index.html)
+  - Hyeontaek Lim (Google Brain), David G Andersen (Carnegie Mellon University), Michael Kaminsky (Intel Labs) (SysML 2019)
+  - Summary:
+    - Goal: traffic reduction, accuracy, computation overhead, and generity of distributed machine leanring
+    - Solution: 3-value quantization with sparsity multiplication, base-3 5 encoding, and zero-run encoding. Lossy compression. data compression ratio of up to 39–107×
+- ✅ Adaptive Communication Strategies to Achieve the Best Error-Runtime Trade-off in Local-Update SGD [Paper](https://www.sysml.cc/doc/2019/124.pdf) [[Youtbe]](https://www.youtube.com/watch?v=RTGb-sbK19s)
+  - Jianyu Wang (Carnegie Mellon University), Gauri Joshi (Carnegie Mellon University) (SysML 2019)
+  - Summary:
+    - Problem: SGD method for synchronous distributed training has bottle neck on the communication between different notes. The promissing solution **Periodic Averaging SGD** reduces the communication time by having communications every few interations of training, but it increases the error rate.
+    - Solution: Measure error-runtime trade-off. To have a good update rule to be able to achive best (Training Loss / Wall-clock time) result. It estimates best communication period each time and choose different learning rate as time goes.
 - Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks. [[Paper]](http://proceedings.mlr.press/v80/jia18a/jia18a.pdf) [[GitHub]](https://github.com/flexflow/FlexFlow)
   - Zhihao Jia, Sina Lin, Charles R. Qi, and Alex Aiken. (*ICML 2018*)
 - Mesh-TensorFlow: Deep Learning for Supercomputers [[Paper]](https://arxiv.org/pdf/1811.02084.pdf) [[GitHub]](https://github.com/tensorflow/mesh)
   - Shazeer, Noam, Youlong Cheng, Niki Parmar, Dustin Tran, et al. (*NIPS 2018*)
   - Summary: Data parallelism for language model
-- PyTorch-BigGraph: A Large-scale Graph Embedding System [[Paper]](https://arxiv.org/pdf/1903.12287.pdf) [[GitHub]](https://github.com/facebookresearch/PyTorch-BigGraph)
+- ✅ 👍 PyTorch-BigGraph: A Large-scale Graph Embedding System [[Paper]](https://arxiv.org/pdf/1903.12287.pdf) [[GitHub]](https://github.com/facebookresearch/PyTorch-BigGraph) [[Youtube]](https://www.youtube.com/watch?v=VPzwRQYM9-Y)
   - Lerer, Adam and Wu, Ledell and Shen, Jiajun and Lacroix, Timothee and Wehrstedt, Luca and Bose, Abhijit and Peysakhovich, Alex (*SysML 2019*)
+  - Summary
+    - Problem: Big challenge to train big graph with millions of nodes and trillions of edges (e.g. social network)
+    - Solution: PyTorch-BigGraph, graph partitioning, graph embedding (node embedding) to train on  single machine or distributed env.
 - Device placement optimization with reinforcement learning [[Paper]](https://arxiv.org/pdf/1706.04972.pdf)
   - Mirhoseini, Azalia, Hieu Pham, Quoc V. Le, Benoit Steiner, Rasmus Larsen, Yuefeng Zhou, Naveen Kumar, Mohammad Norouzi, Samy Bengio, and Jeff Dean. (*ICML 17*)
   - Summary: Using REINFORCE learn a device placement policy. Group operations to excute. Need a lot of GPUs.
@@ -229,6 +249,29 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 - GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism [[Paper]](https://arxiv.org/pdf/1811.06965.pdf)[[GitHub]](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) [[News]](https://www.cnbeta.com/articles/tech/824495.htm)
   - Huang, Yanping, et al. (*arXiv preprint arXiv:1811.06965 (2018)*)
   - Summary:
+- ☑️ ParMAC: Distributed Optimisation of Nested Functions, with Application to Learning Binary Autoencoders [[Paper]](https://www.sysml.cc/doc/2019/152.pdf) [[Youtube]](https://www.youtube.com/watch?v=3iz0o3H1pKw)
+  - Miguel A Carreira-Perpinan (UC Merced), Mehdi Alizadeh (UC Merced) (SysML 2019)
+  - Summary 
+    - A distributed-computation model for MAC (method of auxiliary coordinates). Train on dataset distributed across machines while limiting amount of communication among them. 
+    - ParMAC works on a cluster of machines with a circular topology and alternates two steps until convergence: one step trains the submodels in parallel using stochastic updates, and the other trains the coordinates in parallel.
+- ✅ YellowFin and the Art of Momentum Tuning [Paper](https://www.sysml.cc/doc/2019/153.pdf) [[Youtbe]](https://www.youtube.com/watch?v=Kef2tLXuGy0)
+  - Jian Zhang (Stanford University), Ioannis Mitliagkas (University of Montreal) (SysML 2019)
+  - [YellowFin: Adaptive Optimization for (A)synchronous Systems](https://youtu.be/Etp3yZgfIqc)
+    - Ioannis Mitliagkas (SysML2018)
+  - Summary
+    - Goal: tunning is time consuming and painful for large data set with very complex model. Instead of select model and do hyperparameter tuning on each one of them, we should have a way to quickly select the model and do fine-tuning on the final model.
+    - Problem: momemtum is important, but it is not tuned.
+    - Result: auto-tuning optimizer based on momentum SGD which requires no manual specification of learning rate and momentum.
+- ☑️❓ BlueConnect: Decomposing All-Reduce for Deep Learning on Heterogeneous Network Hierarchy [Paper](https://www.sysml.cc/doc/2019/130.pdf) [[Youtbe]](https://www.youtube.com/watch?v=7XnVJL0YSD8)
+  - Minsik Cho (IBM Research), Ulrich Finkler (IBM Research), David Kung (IBM Research) (SysML 2019)
+  - Summary:
+    - Problem: Communication bandwidth is the bottleneck for distributed DNN. Prior approaches, such as ring-based allreduce, two-step approach does not well solve the problem.
+    - Solution: BlueConnect, a communication library for distributed deep learning that is highly optimized for popular GPU-based platforms. BlueConnect decomposes a single all-reduce operation into a large number of parallelizable reduce-scatter and all-gather operations to exploit the trade-off between latency and bandwidth, and adapt to a variety of network configurations.
+- ☑️ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
+  - Arya Mazumdar (SysML2018)
+  - Summary:
+    - Goal: to solve the problem caused by straggling workers in large distributed system.
+    - Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
 - Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch [[GitHub]](https://github.com/uber/horovod)
 - Distributed machine learning infrastructure for large-scale robotics research [[GitHub]](https://github.com/google-research/tensor2robot) [[Blog]](https://ai.google/research/teams/brain/robotics/)
 - bytedance/byteps
@@ -288,6 +331,16 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 
 ### Training & Inference Optimization
 
+- ✅👍 Optimizing DNN Computation with Relaxed Graph Substitutions [[Youtube]](https://www.youtube.com/watch?v=VjrHrA48elg) [[Paper]](https://www.sysml.cc/doc/2019/22.pdf) [[Github]](https://github.com/jiazhihao/metaflow_sysml19)
+  - *Zhihao Jia (Stanford University), James Thomas (Stanford University), Todd Warszawski (Stanford University), Mingyu Gao (Stanford University), Matei Zaharia (Stanford University), Alex Aiken (Stanford University)* (SysML 2019)
+  - Summary:
+    - Problem: Limitations of optimization in heuristic approaches in graph optimization: robustness, scalability, performance
+    - Solution: MetaFlow, auto generate optimized graph. Two steps: 1. Split big graph into smaller sub-graph using max-flow min-cut approach. 2. Cost-based backtracking search in each sub graph. It also optimizes in different hardware architecture. Achieve performance gian by 1.1-1.6x comparing with TensorFlow, TensorFlow XLA. TensorRT.
+- ☑️ Kernel machines that adapt to GPUs for effective large batch training [[Youtube]](https://www.youtube.com/watch?v=ixp8iBD0EUo) [[Paper]](https://www.sysml.cc/doc/2019/171.pdf)
+  - *Siyuan Ma (The Ohio State University), Mikhail Belkin (Ohio State University)*
+  - Summary:
+    - Problem: **linear scaling** - mini-batch can reduce training time, but increasing batch size beyond a certain value leads to no further improvement in training time.
+    - Solution: a framework that extends linear scaling to match the parallel computing capacity of a resource => higher parallelization and faster training time. Experiments are on kernel machines.
 - TensorRT is a C++ library that facilitates high performance inference on NVIDIA GPUs and deep learning accelerators. [[GitHub]](https://github.com/NVIDIA/TensorRT)
 - Dynamic Space-Time Scheduling for GPU Inference [[Paper]](http://learningsys.org/nips18/assets/papers/102CameraReadySubmissionGPU_Virtualization%20(8).pdf)
   - Jain, Paras, et al. (*NIPS 18, System for ML*)
@@ -353,9 +406,35 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
   - Summary:
 - Horizon: Facebook's Open Source Applied Reinforcement Learning Platform [[Paper]](https://arxiv.org/pdf/1811.00260) [[GitHub]](https://github.com/facebookresearch/Horizon)
   - Gauci, Jason, et al. (*preprint 2019*)
-- RLgraph: Modular Computation Graphs for Deep Reinforcement Learning [[Paper]](http://www.sysml.cc/doc/2019/43.pdf)[[GitHub]](https://github.com/rlgraph/rlgraph)
-  - Schaarschmidt, Michael, Sven Mika, Kai Fricke, and Eiko Yoneki. (*SysML 2019*)
+- ✅ RLgraph: Modular Computation Graphs for Deep Reinforcement Learning [[Youtube]](https://www.youtube.com/watch?v=96cludHRSYM) [[Paper]](http://www.sysml.cc/doc/2019/43.pdf)[[GitHub]](https://github.com/rlgraph/rlgraph)
+  - *Michael Schaarschmidt (University of Cambridge), Sven Mika (rlcore), Kai Fricke (Helmut Schmidt University), Eiko Yoneki (University of Cambridge)* (*SysML 2019*)
   - Summary:
+    - Problem: RL tasks are challenging to implement, execute and test due to algorithmic instability, hyper-parameter sensitivity, and heterogeneous distributed communication patterns.
+    - Solution: RLgraph is a **programming model** to design and execute RL algorithms across frameworks. It offers high-level API and data-flow composition. It can run on Tensorflow/Pytorch using different distributed framework liek Distributed TF or Ray.
+
+### Programming Models
+
+* ☑️ TensorFlow Eager: A multi-stage, Python-embedded DSL for machine learning [[Youtube]](https://www.youtube.com/watch?v=xNoDedz6Cyk) [Paper](https://www.sysml.cc/doc/2019/88.pdf)
+
+  * Akshay Agrawal (Google Brain), Akshay Naresh Modi (Google Brain), Alexandre Passos (Google Brain), Allen Lavoie (Google Brain), Ashish Agarwal (Google Brain), Asim Shankar (Google Brain), Igor Ganichev (Google Brain), Josh Levenberg (Google Brain), Mingsheng Hong (Google Brain), Rajat Monga (Google Brain), Shanqing Cai (Google Brain) (SysML 2019)
+
+  * Summary:
+    * Problem: TF represent computations as dataflow graphs; this permits compiler optimizations and simplifies deployment but hinders rapid prototyping and run-time dynamism.
+    * Solution: TF Eager, multi-stage domain specific language for hardware-accelerated machine learning.
+
+* ☑️ AutoGraph: Imperative-style Coding with Graph-based Performance [[Youtube]](https://www.youtube.com/watch?v=fOSSKE8khI0) [Paper](https://www.sysml.cc/doc/2019/194.pdf)
+
+  * Dan Moldovan (Google Inc.), James Decker (Purdue University), Fei Wang (Purdue University), Andrew Johnson (Google Inc.), Brian Lee (Google Inc.), Zack Nado (Google Inc.), D Sculley (Google), Tiark Rompf (Purdue University), Alexander B Wiltschko (Google Inc.) (SysML 2019)
+
+  * Summary:
+    * Problem: two types of machine learning library style. 1. Imperative type like PyTorch: easy to use, idiomatic but less portable/deployable and has fewer optimization. 2. Graph-based type like TF: serialisable and has more optimization but difficult to use and verbose.
+    * Solution: AutoGraph provides imperative-coding style and graph based performace. Auto transfers normal python codes to TF style.
+
+* TensorFlow.js: Machine Learning for the Web and Beyond [[Youtube]](https://www.youtube.com/watch?v=VszCVt_f5Cw) [Paper](https://www.sysml.cc/doc/2019/154.pdf)
+
+  * Daniel Smilkov (Google), Nikhil Thorat (Google), Yannick Assogba (Google), Charles Nicholson (Verily), Nick Kreeger (Google), Ping Yu (Google), Shanqing Cai (Google), Eric Nielsen (Google), David Soegel (Google), Stan Bileschi (Google), Michael Terry (Google), Ann Yuan (Google), Kangyi Zhang (Google), Sandeep Gupta (Google), Sarah Sirajuddin (Google), D Sculley (Google), Rajat Monga (Google), Greg Corrado (Google), Fernanda Viegas (Google), Martin M Wattenberg (Google) (SysML 2019)
+
+  * Summary: TensorFlow.js is a library for building and executing machine learning algorithms in JavaScript. 
 
 ### Video System
 
@@ -371,34 +450,78 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 #### Papers
 
 - Puffer: Puffer is a Stanford University research study about using machine learning to improve video-streaming algorithms. Please visit [[GitHub]](https://github.com/StanfordSNR/puffer)
+
 - Visual Road: A Video Data Management Benchmark [[Project Website]](http://db.cs.washington.edu/projects/visualroad/)
+  
   - Brandon Haynes, Amrita Mazumdar, Magdalena Balazinska, Luis Ceze, Alvin Cheung (*SIGMOD 2019*)
-- CaTDet: Cascaded Tracked Detector for Efficient Object Detection from Video [[Paper]](http://www.sysml.cc/doc/2019/111.pdf)
+  
+- ☑️ AdaScale: Towards Real-time Video Object Detection using Adaptive Scaling [[Youtube]](https://www.youtube.com/watch?v=5DKD2o41N9Q) [Paper](https://www.sysml.cc/doc/2019/209.pdf)
+
+  * Ting-Wu Chin (Carnegie Mellon University), Ruizhou Ding (Carnegie Mellon University), Diana Marculescu (Carnegie Mellon University)  (*SysML2019*)
+  * Summary
+    * Problem: In object detetion, there is trade-off between speed and accuracy. 
+    * Solution: down scale images no necessarily decreases the accuracy but may sometimes improve it. AdaScale introduces a way to know when and how many to scale so that object detection can improves both on speed and accuracy.
+
+- ☑️ FixyNN: Efficient Hardware for Mobile Computer Vision via Transfer Learning [[Youtube]](https://www.youtube.com/watch?v=rODNz4boJHY) [Paper](https://www.sysml.cc/doc/2019/69.pdf)
+
+  * Paul Whatmough (ARM Research), Chuteng Zhou (Arm Research), Patrick Hansen (Arm Research), Shreyas Venkataramanaiah (Arizona State University), Jae-sun Seo (Arizona State University), Matthew Mattina (ARM Research)   (*SysML2019*)
+  * Summary:
+    * Problem: CNN is too intensive for mobile devices.
+    * Solution: FixyNN combines neural network with hardware. It consists of a fixed-weight feature extractor that generates ubiquitous CNN features, and a conventional programmable CNN accelerator which processes a dataset-specific CNN.
+
+- ✅👍 CaTDet: Cascaded Tracked Detector for Efficient Object Detection from Video [[Paper]](http://www.sysml.cc/doc/2019/111.pdf) [[Youtube]](https://www.youtube.com/watch?v=1NsVb8NaUMM)
+  
   - Mao, Huizi, Taeyoung Kong, and William J. Dally. (*SysML2019*)
+    - Summary:
+      - Problem: video object detection is a compute-intensive task, which requries large amount of GPU for detecting little frames per second.
+      - Solution: CaTDet uses temporal correlation in video, which reduces the ops by 8.7-13x while preserving average precision with little delay sacrafice. It uses two DNN. One is small detector for prososing. Another one is bigger for refinement. 
+  
+- ✅ 👍 Scaling Video Analytics on Constrained Edge Nodes [[Youtube]](https://www.youtube.com/watch?v=1NsVb8NaUMM) [Paper](https://www.sysml.cc/doc/2019/197.pdf)
+
+  * Christopher Canel (Carnegie Mellon University), Thomas Kim (Carnegie Mellon University), Giulio Zhou (Carnegie Mellon University), Conglong Li (Carnegie Mellon University), Hyeontaek Lim (Carnegie Mellon University), David G Andersen (Carnegie Mellon University), Michael Kaminsky (Intel Labs), Subramanya R. Dulloor (ThoughtSpot) (SysML 2019)
+
+  - Summary:
+    - Problem: scaling real-time, wide-area video analytics poses a challenge for bandwidth-limited, compute-constrained camera deployments.
+    - Solution: FilterForeward is a new lightweight, per-application **3 microclassifiers** to identify relevant video to offload. It reduces bandwidth without sacrafice accuracy. 6.8x higher throughput.
+
 - Live Video Analytics at Scale with Approximation and Delay-Tolerance [[Paper]](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/02/videostorm_nsdi17.pdf)
+  
   - Zhang, Haoyu, Ganesh Ananthanarayanan, Peter Bodik, Matthai Philipose, Paramvir Bahl, and Michael J. Freedman. (*NSDI 2017*)
+  
 - Chameleon: scalable adaptation of video analytics [[Paper]](http://people.cs.uchicago.edu/~junchenj/docs/Chameleon_SIGCOMM_CameraReady.pdf)
   - Jiang, Junchen, et al. (*SIGCOMM 2018*)
   - Summary: Configuration controller for balancing accuracy and resource. Golden configuration is a good design. Periodic profiling often exceeded any resource savings gained by adapting the configurations.
+  
 - Noscope: optimizing neural network queries over video at scale [[Paper]](https://arxiv.org/pdf/1703.02529) [[GitHub]](https://github.com/stanford-futuredata/noscope)
   - Kang, Daniel, John Emmons, Firas Abuzaid, Peter Bailis, and Matei Zaharia. (*VLDB2017*)
   - Summary:
+  
 - SVE: Distributed video processing at Facebook scale [[Paper]](http://www.cs.princeton.edu/~wlloyd/papers/sve-sosp17.pdf)
   - Huang, Qi, et al. (*SOSP2017*)
   - Summary:
+  
 - Scanner: Efficient Video Analysis at Scale [[Paper]](http://graphics.stanford.edu/papers/scanner/poms18_scanner.pdf)[[GitHub]](https://github.com/scanner-research/scanner)
   - Poms, Alex, Will Crichton, Pat Hanrahan, and Kayvon Fatahalian (*SIGGRAPH 2018*)
   - Summary:
+  
 - A cloud-based large-scale distributed video analysis system [[Paper]](https://ai.google/research/pubs/pub45631)
+  
   - Wang, Yongzhe, et al. (*ICIP 2016*)
+  
 - Rosetta: Large scale system for text detection and recognition in images [[Paper]](https://research.fb.com/wp-content/uploads/2018/10/Rosetta-Large-scale-system-for-text-detection-and-recognition-in-images.pdf)
   - Borisyuk, Fedor, Albert Gordo, and Viswanath Sivakumar. (*KDD 2018*)
   - Summary:
+  
 - Neural adaptive content-aware internet video delivery. [[Paper]](https://www.usenix.org/system/files/osdi18-yeo.pdf) [[GitHub]](https://github.com/kaist-ina/NAS_public)
   - Yeo, H., Jung, Y., Kim, J., Shin, J. and Han, D., 2018.  (*OSDI 2018*)
   - Summary: Combine video super-resolution and ABR
 
 ### Edge AI
+- ☑️ Ternary Hybrid Neural-Tree Networks for Highly Constrained IoT Applications [[Youtube]](https://www.youtube.com/watch?v=U-3R8YFBbUM) [Paper](https://www.sysml.cc/doc/2019/107.pdf)
+  - *Dibakar Gope (Arm Inc.), Ganesh Dasika (Arm Research), Matthew Mattina (ARM Research)*
+  - Summary:
+    - Problem: power and storage constrain on IOT devices makes it challenging to run ML models on them. Previous solutions like architectural optimization, pruning, quantization etc have their own trade-offs
+    - Solution: Hybrid Neural-Tree network. Combine both neural network with decision tree. Reduce  model size by > 50%, memory footprint by > 30% on keyword-spotting network.
 - Neurosurgeon: Collaborative intelligence between the cloud and mobile edge. [[Paper]](http://web.eecs.umich.edu/~jahausw/publications/kang2017neurosurgeon.pdf)
   - Kang, Y., Hauswald, J., Gao, C., Rovinski, A., Mudge, T., Mars, J. and Tang, L., 2017, April.
   - In ACM SIGARCH Computer Architecture News (Vol. 45, No. 1, pp. 615-629). ACM.
@@ -418,9 +541,29 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 
 ### Hardware
 
+* ☑️ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
+
+- Jonathan Binas (SysML2018)
+- Summary
+  - Goal: use analog electronic to simulate deep networks
+  - Result: analog electronic can represent non-linear, sumation, etc operations in deep learning quite easily. Representation of deep networks using analog electronic can be quite efficient, thus, digital representation add a layer on top of silicon may not be necessary.
+
+
+
 ### Debugging and Monitoring
 
 ### Safety, Security, Privacy, Fairness, Interpretability, Accessibility
+
+- ✅ "I Like the Way You Think!" - Inspecting the Internal Logic of Recurrent Neural Networks [[Paper]](https://www.sysml.cc/doc/2018/38.pdf)[[Youtube]](https://youtu.be/ErLUbbspNRY)
+  - Thibault Sellam, Kevin Lin, Ian Yiran Huang, Carl Vondrick, Eugene Wu (SysML 2018)
+  - Summary
+    - Goal: to understand the internal logic of RNN. Neural nets are commonly treated as blackbox. How to understand the internal logic of it so that we can have interpretation.
+    - Solution: Luigi: Deep Nerual Inspection (DNI). The idea is model checking. Use hypothesis "functions" to match with trained model in the DNI. Identify high-level logic learned by units or groups of units.
+- ☑️ [Understanding the Limitations of Current Energy-Efficient Design Approaches for Deep Neural Networks](https://youtu.be/XCdy5egmvaU)
+  - Yu-Hsin Chen, Tien-Ju Yang, Joel Emer, Vivienne Sze (SysML 2018)
+  - Summary
+    - Goal: to improve energy efficiency of DNN and keep accuracy at the same time. Improvement of network structure does not necessary improve the energy efficiency of DNN training. For example, AlexNet is more energy efficient than SqueezeNet which is a network-pruned version of AlexNet.
+    - Result: Flexible energy-efficient hardward: Eyeriss. It supports wide range of filter shapes and sparsity, and different layers (CNN, FC). Balancing between flexibility and efficiency.
 
 ### Data Processing
 
@@ -464,67 +607,3 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 ## Backlog
 
 [SysML 2018](https://www.sysml.cc/2018/index.html): accepted posters not read.
-
-
-
-#### **Parallel & Distributed Learning**
-
-- ParMAC: Distributed Optimisation of Nested Functions, with Application to Learning Binary Autoencoders [[Paper]](https://www.sysml.cc/doc/2019/152.pdf) [[Youtube]](https://www.youtube.com/watch?v=3iz0o3H1pKw)
-
-  - Miguel A Carreira-Perpinan (UC Merced), Mehdi Alizadeh (UC Merced) (SysML 2019)
-
-- ☑️❓ BlueConnect: Decomposing All-Reduce for Deep Learning on Heterogeneous Network Hierarchy [Paper](https://www.sysml.cc/doc/2019/130.pdf) [[Youtbe]](https://www.youtube.com/watch?v=7XnVJL0YSD8)
-
-  - Minsik Cho (IBM Research), Ulrich Finkler (IBM Research), David Kung (IBM Research) (SysML 2019)
-  - Summary:
-    - Problem: Communication bandwidth is the bottleneck for distributed DNN. Prior approaches, such as ring-based allreduce, two-step approach does not well solve the problem.
-    - Solution: BlueConnect, a communication library for distributed deep learning that is highly optimized for popular GPU-based platforms. BlueConnect decomposes a single all-reduce operation into a large number of parallelizable reduce-scatter and all-gather operations to exploit the trade-off between latency and bandwidth, and adapt to a variety of network configurations.
-
-- 3LC: Lightweight and Effective Traffic Compression for Distributed Machine Learning [Paper](https://www.sysml.cc/doc/2019/32.pdf) [[Youtbe]](https://www.sysml.cc/index.html)
-
-  - Hyeontaek Lim (Google Brain), David G Andersen (Carnegie Mellon University), Michael Kaminsky (Intel Labs) (SysML 2019)
-
-- Adaptive Communication Strategies to Achieve the Best Error-Runtime Trade-off in Local-Update SGD [Paper](https://www.sysml.cc/doc/2019/124.pdf) [[Youtbe]](https://www.youtube.com/watch?v=RTGb-sbK19s)
-
-  - Jianyu Wang (Carnegie Mellon University), Gauri Joshi (Carnegie Mellon University) (SysML 2019)
-
-- YellowFin and the Art of Momentum Tuning [Paper](https://www.sysml.cc/doc/2019/153.pdf) [[Youtbe]](https://www.youtube.com/watch?v=Kef2tLXuGy0)
-
-  - Jian Zhang (Stanford University), Ioannis Mitliagkas (University of Montreal) (SysML 2019)
-
-- ☑️ [Robust Gradient Descent via Moment Encoding with LDPC Codes](https://youtu.be/QLPj6aQmXFw)
-
-  - Arya Mazumdar (SysML2018)
-
-  - Summary:
-    - Goal: to solve the problem caused by straggling workers in large distributed system.
-    - Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
-
-- ☑️ [Analog electronic deep networks for fast and efficient inference](https://youtu.be/8t0Yunt5kE4)
-
-  - Jonathan Binas (SysML2018)
-  - Summary
-    - Goal: use analog electronic to simulate deep networks
-    - Result: analog electronic can represent non-linear, sumation, etc operations in deep learning quite easily. Representation of deep networks using analog electronic can be quite efficient, thus, digital representation add a layer on top of silicon may not be necessary.
-
-- ✅ [YellowFin: Adaptive Optimization for (A)synchronous Systems](https://youtu.be/Etp3yZgfIqc)
-
-  - Ioannis Mitliagkas (SysML2018)
-  - Summary
-    - Goal: tunning is time consuming and painful for large data set with very complex model. Instead of select model and do hyperparameter tuning on each one of them, we should have a way to quickly select the model and do fine-tuning on the final model.
-    - Problem: momemtum is important, but it is not tuned.
-    - Result: auto-tuning optimizer based on momentum SGD which requires no manual specification of learning rate and momentum.
-
-- ☑️ [Understanding the Limitations of Current Energy-Efficient Design Approaches for Deep Neural Networks](https://youtu.be/XCdy5egmvaU)
-
-  - Yu-Hsin Chen, Tien-Ju Yang, Joel Emer, Vivienne Sze (SysML 2018)
-  - Summary
-    - Goal: to improve energy efficiency of DNN and keep accuracy at the same time. Improvement of network structure does not necessary improve the energy efficiency of DNN training. For example, AlexNet is more energy efficient than SqueezeNet which is a network-pruned version of AlexNet.
-    - Result: Flexible energy-efficient hardward: Eyeriss. It supports wide range of filter shapes and sparsity, and different layers (CNN, FC). Balancing between flexibility and efficiency.
-
-- ✅ "I Like the Way You Think!" - Inspecting the Internal Logic of Recurrent Neural Networks [[Paper]](https://www.sysml.cc/doc/2018/38.pdf)[[Youtube]](https://youtu.be/ErLUbbspNRY)
-
-  - Thibault Sellam, Kevin Lin, Ian Yiran Huang, Carl Vondrick, Eugene Wu
-  - Summary
-    - Goal: to understand the internal logic of RNN. Neural nets are commonly treated as blackbox. How to understand the internal logic of it so that we can have interpretation.
-    - Solution: Luigi: Deep Nerual Inspection (DNI). The idea is model checking. Use hypothesis "functions" to match with trained model in the DNI. Identify high-level logic learned by units or groups of units.
