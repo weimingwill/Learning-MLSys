@@ -4,7 +4,7 @@ A curated list of research in machine learning system, including tools, coureses
 
 Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sysml.cc/doc/sysml-whitepaper.pdf)
 
-[System ML Mindmap](https://raw.githubusercontent.com/weimingwill/Awesome-System-for-Machine-Learning/master/imgs/System_ML.png)
+![System ML Mindmap](https://raw.githubusercontent.com/weimingwill/Awesome-System-for-Machine-Learning/master/imgs/System_ML.png)
 
 
 
