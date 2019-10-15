@@ -6,37 +6,9 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 
 ![System ML Mindmap](https://raw.githubusercontent.com/weimingwill/Awesome-System-for-Machine-Learning/master/imgs/System_ML.png)
 
+[TOC]
 
-
-## Table of Contents
-
-### Resources
-- [Survey](#survey)
-- [Book](#book)
-- [Video](#video)
-- [Course](#course)
-- [Blog](#blog)
-- [Tool](#userful-tools)
-- [Project with code](#project)
-### System for ML
-- [Parallel & Distributed Leanring](#parallel-&-distributed-learning)
-- [Model Database](#model-database-experiment-version-control)
-- [Model Serving](#model-serving)
-- [Training & Inference Optimization](#training-&-inference-optimization)
-- [Machine Learning Infrastructure](#machine-learning-infrastructure)
-- [Machine Learning Compiler](#machine-learning-compiler)
-- [AutoML System](#automl-system)
-- [Deep Reinforcement Learning System](#deep-reinforcement-learning-system)
-- [Edge AI](#edge-ai)
-- [Video System](#video-system)
-- [Data Processing](#data-processing)
-
-### ML for System
-- [Resource Management](#resource-management)
-- [Advanced Theory](#advanced-theory)
-- [Traditional System Optimization](#traditional-system-optimization-papers)
-
-### PR template
+## PR template
 
 ```
 - Title [[Paper]](link) [[GitHub]](link)
@@ -185,10 +157,11 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 
 ### Conferences
 
-* NIPS
+* SysML: System Machine Learning
 * ICML
+* NIPS
 * SOSP
-* SysML
+* OSDI: Operating System Design and Implemetation
 
 
 
@@ -231,24 +204,23 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
   - Summary:
     - Problem: SGD method for synchronous distributed training has bottle neck on the communication between different notes. The promissing solution **Periodic Averaging SGD** reduces the communication time by having communications every few interations of training, but it increases the error rate.
     - Solution: Measure error-runtime trade-off. To have a good update rule to be able to achive best (Training Loss / Wall-clock time) result. It estimates best communication period each time and choose different learning rate as time goes.
-- Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks. [[Paper]](http://proceedings.mlr.press/v80/jia18a/jia18a.pdf) [[GitHub]](https://github.com/flexflow/FlexFlow)
+- ✅ Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks. [[Paper]](http://proceedings.mlr.press/v80/jia18a/jia18a.pdf) [[GitHub]](https://github.com/flexflow/FlexFlow)
   - Zhihao Jia, Sina Lin, Charles R. Qi, and Alex Aiken. (*ICML 2018*)
-- Mesh-TensorFlow: Deep Learning for Supercomputers [[Paper]](https://arxiv.org/pdf/1811.02084.pdf) [[GitHub]](https://github.com/tensorflow/mesh)
+  - Summary
+    - From single dimension distributed parallel training to **layer-wise parallelism**. Optimize how each layer is parallelized by solving a graph search problem.
+- ☑️ Mesh-TensorFlow: Deep Learning for Supercomputers [[Paper]](https://arxiv.org/pdf/1811.02084.pdf) [[GitHub]](https://github.com/tensorflow/mesh)
   - Shazeer, Noam, Youlong Cheng, Niki Parmar, Dustin Tran, et al. (*NIPS 2018*)
-  - Summary: Data parallelism for language model
+  - Summary: Data parallelism for language model.
 - ✅ 👍 PyTorch-BigGraph: A Large-scale Graph Embedding System [[Paper]](https://arxiv.org/pdf/1903.12287.pdf) [[GitHub]](https://github.com/facebookresearch/PyTorch-BigGraph) [[Youtube]](https://www.youtube.com/watch?v=VPzwRQYM9-Y)
   - Lerer, Adam and Wu, Ledell and Shen, Jiajun and Lacroix, Timothee and Wehrstedt, Luca and Bose, Abhijit and Peysakhovich, Alex (*SysML 2019*)
   - Summary
     - Problem: Big challenge to train big graph with millions of nodes and trillions of edges (e.g. social network)
     - Solution: PyTorch-BigGraph, graph partitioning, graph embedding (node embedding) to train on  single machine or distributed env.
-- Device placement optimization with reinforcement learning [[Paper]](https://arxiv.org/pdf/1706.04972.pdf)
-  - Mirhoseini, Azalia, Hieu Pham, Quoc V. Le, Benoit Steiner, Rasmus Larsen, Yuefeng Zhou, Naveen Kumar, Mohammad Norouzi, Samy Bengio, and Jeff Dean. (*ICML 17*)
-  - Summary: Using REINFORCE learn a device placement policy. Group operations to excute. Need a lot of GPUs.
-- Spotlight: Optimizing device placement for training deep neural networks  [[Paper]](http://proceedings.mlr.press/v80/gao18a/gao18a.pdf)
-  - Gao, Yuanxiang, Li Chen, and Baochun Li (*ICML 18*)
-- GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism [[Paper]](https://arxiv.org/pdf/1811.06965.pdf)[[GitHub]](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) [[News]](https://www.cnbeta.com/articles/tech/824495.htm)
+- ✅ GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism [[Paper]](https://arxiv.org/pdf/1811.06965.pdf)[[GitHub]](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) [[News]](https://www.cnbeta.com/articles/tech/824495.htm)
   - Huang, Yanping, et al. (*arXiv preprint arXiv:1811.06965 (2018)*)
   - Summary:
+    - Problem: solutions for increasing model capacity beyond the memory limit are often architecture-specific and do not transfer to other tasks.
+    - Solution: GPipe pipeline parallelism with batch splitting that allows scaling any network that can be expressed as a sequence of layers.
 - ☑️ ParMAC: Distributed Optimisation of Nested Functions, with Application to Learning Binary Autoencoders [[Paper]](https://www.sysml.cc/doc/2019/152.pdf) [[Youtube]](https://www.youtube.com/watch?v=3iz0o3H1pKw)
   - Miguel A Carreira-Perpinan (UC Merced), Mehdi Alizadeh (UC Merced) (SysML 2019)
   - Summary 
@@ -272,21 +244,26 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
   - Summary:
     - Goal: to solve the problem caused by straggling workers in large distributed system.
     - Solution: Use Error-Correcting Code (i.e. LDPC codes) to encode the moment of gradient descent. It needs more workers than required for sending the extra encodings and does not need to wait for all workers to respond.
-- Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch [[GitHub]](https://github.com/uber/horovod)
-- Distributed machine learning infrastructure for large-scale robotics research [[GitHub]](https://github.com/google-research/tensor2robot) [[Blog]](https://ai.google/research/teams/brain/robotics/)
-- bytedance/byteps
-  - A high performance and general PS framework for distributed training [[GitHub]](https://github.com/bytedance/byteps)
 
-#### Multi-jobs on Cluster
-- Gandiva: Introspective cluster scheduling for deep learning. [[Paper]](https://www.usenix.org/system/files/osdi18-xiao.pdf)
+##### Githubs
+
+- Horovod: Distributed training framework for TensorFlow, Keras, and PyTorch [[GitHub]](https://github.com/uber/horovod)
+- Tensor2Robot: Distributed machine learning infrastructure for large-scale robotics research [[GitHub]](https://github.com/google-research/tensor2robot) [[Blog]](https://ai.google/research/teams/brain/robotics/)
+- bytedance/byteps: A high performance and general PS framework for distributed training [[GitHub]](https://github.com/bytedance/byteps)
+
+#### Multi-jobs on Cluster (x)
+- ☑️ Gandiva: Introspective cluster scheduling for deep learning. [[Paper]](https://www.usenix.org/system/files/osdi18-xiao.pdf)
   - Xiao, Wencong, et al. (*OSDI 2018*)
-  - Summary: Improvet the efficency of hyper-parameter in cluster. Aware of hardware utilization.
-- Optimus: an efficient dynamic resource scheduler for deep learning clusters [[Paper]](https://i.cs.hku.hk/~cwu/papers/yhpeng-eurosys18.pdf)
+  - Summary: 
+    - Improvet the efficency of hyper-parameter in **GPU cluster**. Aware of hardware utilization.
+- ☑️ Optimus: an efficient dynamic **resource scheduler** for deep learning clusters [[Paper]](https://i.cs.hku.hk/~cwu/papers/yhpeng-eurosys18.pdf)
   - Peng, Yanghua, et al. (*EuroSys 2018*)
-  - Summary: Job scheduling on clusters. Total complete time as the metric.
-- Multi-tenant GPU clusters for deep learning workloads: Analysis and implications. [[Paper]](https://www.microsoft.com/en-us/research/uploads/prod/2018/05/gpu_sched_tr.pdf) [[dataset]](https://github.com/msr-fiddle/philly-traces)
+  - Summary: 
+    - basedon online resource-performance models.
+    - Job scheduling on clusters. Total complete time as the metric.
+- ☑️ Multi-tenant GPU clusters for deep learning workloads: Analysis and implications. [[Paper]](https://www.microsoft.com/en-us/research/uploads/prod/2018/05/gpu_sched_tr.pdf) [[dataset]](https://github.com/msr-fiddle/philly-traces)
   - Jeon, Myeongjae, Shivaram Venkataraman, Junjie Qian, Amar Phanishayee, Wencong Xiao, and Fan Yang
-- Slurm: A Highly Scalable Workload Manager [[GitHub]](https://github.com/SchedMD/slurm)
+- Slurm: A Highly Scalable Workload Manager for cluster resource management and job scheduling system [[GitHub]](https://github.com/SchedMD/slurm)
 
 ### Model Database & Version Control
 
@@ -374,7 +351,7 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 ### Machine Learning Infrastructure
 - AI infrastructures list [[GitHub]](https://github.com/1duo/awesome-ai-infrastructures)
 - cortexlabs/cortex: Deploy machine learning applications without worrying about setting up infrastructure, managing dependencies, or orchestrating data pipelines. [[GitHub]](https://github.com/cortexlabs/cortex)
-- Osquery is a SQL powered operating system instrumentation, monitoring, and analytics framework. [[Facebook Project]](https://osquery.io/)
+- Osquery: a SQL powered operating system instrumentation, monitoring, and analytics framework. [[Facebook Project]](https://osquery.io/)
 - Seldon: Sheldon Core is an open source platform for deploying machine learning models on a Kubernetes cluster.[[GitHub]](https://github.com/SeldonIO/seldon-core)
 - Kubeflow: Kubeflow is a machine learning (ML) toolkit that is dedicated to making deployments of ML workflows on Kubernetes simple, portable, and scalable. [[GitHub]](https://github.com/kubeflow/pipelines)
 - Polytaxon: A platform for reproducible and scalable machine learning and deep learning on kubernetes. [[GitHub]](https://github.com/polyaxon/polyaxon)
@@ -396,7 +373,7 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
 - DeepSwarm: DeepSwarm is an open-source library which uses Ant Colony Optimization to tackle the neural architecture search problem. [[GitHub]](https://github.com/Pattio/DeepSwarm)
 - Google/AdaNet: AdaNet is a lightweight TensorFlow-based framework for automatically learning high-quality models with minimal expert. Importantly, AdaNet provides a general framework for not only learning a neural network architecture, but also for learning to ensemble to obtain even better models. [[GitHub]](https://github.com/tensorflow/adanet)
 
-### Deep Reinforcement Learning System
+### Reinforcement Learning
 
 - Ray: A Distributed Framework for Emerging {AI} Applications [[GitHub]](https://www.usenix.org/conference/osdi18/presentation/moritz)
   - Moritz, Philipp, et al. (*OSDI 2018*)
@@ -411,6 +388,15 @@ Path to system and machine learning. [[Whitepaper You Must Read]](http://www.sys
   - Summary:
     - Problem: RL tasks are challenging to implement, execute and test due to algorithmic instability, hyper-parameter sensitivity, and heterogeneous distributed communication patterns.
     - Solution: RLgraph is a **programming model** to design and execute RL algorithms across frameworks. It offers high-level API and data-flow composition. It can run on Tensorflow/Pytorch using different distributed framework liek Distributed TF or Ray.
+- ✅ Device placement optimization with reinforcement learning [[Paper]](https://arxiv.org/pdf/1706.04972.pdf)[[Video]](https://vimeo.com/238221511)
+  - Mirhoseini, Azalia, Hieu Pham, Quoc V. Le, Benoit Steiner, Rasmus Larsen, Yuefeng Zhou, Naveen Kumar, Mohammad Norouzi, Samy Bengio, and Jeff Dean. (*ICML 17*)
+  - Summary: 
+    - Problem: trend towards many-devices training with big models, and large batch size.
+    - Solution: Use RL to learn a device placement policy. **Policy gradient method**. It finds non-trivival assignment of operations to devices that outperform heuristic approach. Need a lot of GPUs.
+- ✅ Spotlight: Optimizing device placement for training deep neural networks  [[Paper]](http://proceedings.mlr.press/v80/gao18a/gao18a.pdf) [[Video]](https://vimeo.com/312263309)
+  - Gao, Yuanxiang, Li Chen, and Baochun Li (*ICML 18*)
+    - Summary
+      - Solution: Modeling it as a **Markov decision process** with multiple stages. 
 
 ### Programming Models
 
